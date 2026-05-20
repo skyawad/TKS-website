@@ -5,13 +5,13 @@
 Dubai/Gulf-facing marketing website for Techknomatic Services.
 
 - **Stack:** React 18 + TypeScript + Vite + React Router v7. Plain CSS with custom-property tokens (no Tailwind/CSS-in-JS). Framer Motion for scroll reveal. `react-helmet-async` for per-page SEO. Static deploy target.
-- **Design:** Light-first, friendly-confident. Orange `#FF4A00` as the brand color over warm-white surfaces. Space Grotesk (display) + Inter (body). Zapier-style — rounded pill CTAs, floating product cards in hero, soft shadows, hover-lift cards. Not the old "DIFC boardroom" dark aesthetic — that was superseded 2026-05-19.
+- **Design:** Light-first, friendly-confident, with a supported dark theme toggle (added 2026-05-20). Orange `#FF4A00` is the brand color and is invariant across themes. Space Grotesk (display) + Inter (body). Zapier-style — rounded pill CTAs, floating product cards in hero, soft shadows, hover-lift cards. The old "DIFC boardroom" dark aesthetic (gold / teal / maroon) is still dead — the supported dark theme is a clean Zapier-style near-black with the same brand orange.
 - **Audience:** UAE / Saudi / wider GCC enterprise B2B — CTO / CIO / CDO at DIFC, ADGM, DMCC, BFSI, government, regulated industries.
 
 ## What this project is NOT
 
 - Not the India site (separate repo). Never import logic, content, or style from it.
-- Not the previous dark-themed iteration. All dark/gold/teal tokens are dead. Light-only.
+- Not the previous dark-themed iteration. The old gold/teal/maroon "DIFC boardroom" tokens stay dead. The current dark theme is a separate, modern, Zapier-style dark — neutral near-black surfaces with the same orange brand.
 - Not a generic template — distinctive typography (Space Grotesk H1 + serif fallback never) + Gulf-region content + custom floating-card stack must remain recognisable.
 - Not a place to invent copy: all text comes from `_planning/content/*.md`.
 
@@ -35,9 +35,9 @@ Dubai/Gulf-facing marketing website for Techknomatic Services.
 ## Design rules
 
 - Brand color is orange `#FF4A00`. Used for primary CTAs, eyebrow pills, link text, accent strokes. Tile colors for products use the locked 5-color palette in `DESIGN.md` (`--icon-orange`, `--icon-blue`, `--icon-purple`, `--icon-green`, `--icon-yellow`).
-- Never use: gold, teal, purple as background fill (only as product-tile accent), saffron, stock office photos, sharp-cornered cards, centred body text, India-flag / cricket / Bollywood imagery, dark-theme tokens.
-- Always use CSS variables from `_planning/DESIGN.md`. Zero hardcoded hex in `.tsx` files.
-- Light only. No theme toggle.
+- Never use: gold, teal, purple as background fill (only as product-tile accent), saffron, stock office photos, sharp-cornered cards, centred body text, India-flag / cricket / Bollywood imagery, the *old* DIFC-boardroom dark tokens.
+- Always use CSS variables from `tokens.css`. Zero hardcoded hex in `.tsx` files.
+- Light + dark themes are supported. `<html data-theme="light|dark">` is managed by `ThemeContext` (default = system preference, persisted to localStorage). All flippable tokens (`--canvas`, `--ink`, `--surface-*`, `--shadow-*`, `--card-edge`) are overridden in `[data-theme="dark"]`. Brand orange, icon palette, status colors, spacing, type and motion are theme-agnostic. When you author new components, prefer tokens — they handle both themes automatically. The two exceptions are the Footer (intentionally always-dark band) and PageCTA (always-dark island card); these use hardcoded white text + hardcoded dark backgrounds and that is correct.
 - Pill CTAs (`border-radius: 999px`). Cards 14-16px radius. Inputs 10px. No sharp corners on user surfaces.
 - WhatsApp green `#25D366` is the single documented palette exception, used only on the WhatsApp FAB.
 

@@ -2,6 +2,114 @@
   padding: var(--space-6) var(--space-5);
 }
 
+.frame {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  isolation: isolate;
+}
+
+/* Animated neon line — a glowing conic-gradient sector that quietly
+   rotates around the card border. Uses @property so the gradient angle
+   itself can animate (Chrome 85+, Safari 16.4+, Firefox 128+). */
+@property --neon-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.neon {
+  position: absolute;
+  /* Inset slightly negative so the ring sits exactly on the card edge
+     (and isn't covered by the solid .inner background that follows it). */
+  inset: -1.5px;
+  border-radius: calc(var(--r-xl) + 1.5px);
+  padding: 1.5px;
+  background: conic-gradient(
+    from var(--neon-angle),
+    rgba(255, 74, 0, 0) 0deg,
+    rgba(255, 74, 0, 0) 270deg,
+    rgba(255, 165, 100, 0.55) 305deg,
+    rgba(255, 74, 0, 1)      340deg,
+    rgba(255, 200, 130, 0.7) 355deg,
+    rgba(255, 74, 0, 0)      360deg
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  filter: drop-shadow(0 0 6px rgba(255, 74, 0, 0.6));
+  pointer-events: none;
+  /* Above .inner so the ring isn't covered by the card's solid background. */
+  z-index: 3;
+  animation: neonSpin 7s linear infinite;
+}
+
+@keyframes neonSpin {
+  to { --neon-angle: 360deg; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .neon { animation: none; }
+}
+
+/* Bottom-left trend chart. Polyline draws up-and-to-the-right on hover;
+   transitions are present in BOTH states so the line reverses back to
+   zero when the cursor leaves. */
+.trend {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 140px;
+  height: 70px;
+  z-index: 2;
+  opacity: 0.32;
+  transition: opacity 280ms ease;
+}
+
+.trendLine {
+  fill: none;
+  /* Same orange family as the column-chart bars on the CTA card. */
+  stroke: var(--brand);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  /* Approx polyline length ≈ 260 (heavily jagged share-market path with
+     dips before each rally — final goal still trends upward). */
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+  filter: drop-shadow(0 0 4px rgba(255, 74, 0, 0.4));
+  transition: stroke-dashoffset 1.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.inner:hover .trend {
+  opacity: 0.6;
+}
+
+.trendHead {
+  fill: var(--brand);
+  opacity: 0;
+  filter: drop-shadow(0 0 6px rgba(255, 74, 0, 0.85));
+  transition: opacity 260ms ease;
+}
+
+.inner:hover .trendLine {
+  stroke-dashoffset: 0;
+}
+
+.inner:hover .trendHead {
+  opacity: 1;
+  transition: opacity 260ms ease 1.15s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trend, .trendLine, .trendHead { transition: none; }
+}
+
 /* ============================================================
    Card surface — deep ink with a layered aurora:
      · warm orange bloom from top-right
@@ -19,7 +127,7 @@
     radial-gradient(ellipse 55% 75% at -5% 110%,  rgba(96,  120, 230, 0.18) 0%, transparent 55%),
     radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.045) 1px, transparent 0);
   background-size: auto, auto, 22px 22px;
-  color: var(--canvas);
+  color: #FFFFFF;
   border-radius: var(--r-xl);
   padding: var(--space-7) var(--space-6);
   text-align: center;
@@ -74,58 +182,58 @@
 }
 
 .bars rect {
-  fill: rgba(255, 154, 92, 0.6);
+  fill: rgba(255, 154, 92, 0.55);
   transform-origin: bottom;
   transform-box: fill-box;
-  animation: barRise 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
-             barIdle 5s ease-in-out infinite 1s;
   transform: scaleY(0);
   rx: 2;
 }
 
-.bar1 { animation-delay: 0.0s, 1.0s; }
-.bar2 { animation-delay: 0.12s, 1.1s; }
-.bar3 { animation-delay: 0.24s, 1.2s; }
-.bar4 { animation-delay: 0.36s, 1.3s; }
-.bar5 { animation-delay: 0.48s, 1.4s; }
 .bar6 {
-  animation-delay: 0.60s, 1.5s;
   fill: var(--brand);
   filter: drop-shadow(0 0 8px rgba(255, 74, 0, 0.55));
 }
 
-@keyframes barRise {
-  to { transform: scaleY(1); }
+/* Hover: bars rise one by one AFTER the trend line finishes drawing
+   (trend line transition is 1.8s — bars start staggering from 1.6s). */
+.inner:hover .bars rect {
+  transform: scaleY(1);
+  transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-@keyframes barIdle {
-  0%, 100% { opacity: 1;    }
-  50%      { opacity: 0.78; }
-}
+.inner:hover .bar1 { transition-delay: 1.6s; }
+.inner:hover .bar2 { transition-delay: 1.75s; }
+.inner:hover .bar3 { transition-delay: 1.9s; }
+.inner:hover .bar4 { transition-delay: 2.05s; }
+.inner:hover .bar5 { transition-delay: 2.2s; }
+.inner:hover .bar6 { transition-delay: 2.35s; }
 
-/* Sparkline — first draws across the bars at a steady linear pace,
-   then idles. A traveling pulse keeps the chart feeling live. */
+/* Sparkline — sits above the column chart. Hidden until the cursor enters
+   the card; draws once the bars are up. */
 .sparkLine {
   stroke: #FF9A5C;
   filter: drop-shadow(0 0 5px rgba(255, 154, 92, 0.7));
   stroke-dasharray: 280;
   stroke-dashoffset: 280;
-  animation: sparkDraw 2.4s linear 0.4s forwards;
 }
 
-@keyframes sparkDraw {
-  to { stroke-dashoffset: 0; }
+.inner:hover .sparkLine {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1.4s linear 3.1s;
 }
 
-/* Live data-feed glow head — loops along the line continuously after the
-   first draw completes. */
+/* Live data-feed glow head — only visible once the chart finishes. */
 .livePulse {
   fill: var(--brand);
-  opacity: 0.95;
+  opacity: 0;
   filter: drop-shadow(0 0 10px rgba(255, 74, 0, 0.95));
-  animation: livePulseScale 1.6s ease-in-out infinite 1.6s;
   transform-box: fill-box;
   transform-origin: center;
+}
+
+.inner:hover .livePulse {
+  opacity: 0.95;
+  animation: livePulseScale 1.6s ease-in-out infinite 4.6s;
 }
 
 @keyframes livePulseScale {
@@ -244,7 +352,7 @@
   line-height: 1.18;
   letter-spacing: -0.015em;
   margin: 0 0 var(--space-3);
-  color: var(--canvas);
+  color: #FFFFFF;
   background: linear-gradient(180deg, #FFFFFF 0%, #FFE7D9 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -272,7 +380,7 @@
 
 .primaryBtn {
   background: linear-gradient(135deg, var(--brand) 0%, #FF7E3D 100%) !important;
-  color: var(--canvas) !important;
+  color: #FFFFFF !important;
   border: none !important;
   box-shadow:
     0 10px 28px rgba(255, 74, 0, 0.42),
@@ -300,7 +408,7 @@
 }
 .secondaryLink:hover {
   background: rgba(255, 255, 255, 0.08);
-  color: var(--canvas);
+  color: #FFFFFF;
   border-color: rgba(255, 255, 255, 0.35);
 }
 

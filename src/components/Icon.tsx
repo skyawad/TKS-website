@@ -24,7 +24,13 @@ export type IconName =
   | "integrity"
   | "ethics"
   | "inclusion"
-  | "innovation";
+  | "innovation"
+  | "telecom"
+  | "healthcare"
+  | "retail"
+  | "logistics"
+  | "government"
+  | "bank";
 
 export interface IconProps extends SVGProps<SVGSVGElement> {
   name: IconName;
@@ -203,6 +209,71 @@ export function Icon({ name, size = 22, ...rest }: IconProps) {
           <path d="M10 21h4" />
           <path d="M12 3a6 6 0 0 0-3.5 10.9c.5.4.8 1 .9 1.6L9.7 18h4.6l.3-2.5c.1-.6.4-1.2.9-1.6A6 6 0 0 0 12 3z" />
           <path d="M2.5 12H4M20 12h1.5M5 5l1 1M18 5l-1 1" />
+        </svg>
+      );
+
+    case "telecom":
+      // Broadcast tower with concentric signal arcs.
+      return (
+        <svg {...common}>
+          <path d="M12 11v10" />
+          <path d="M9 21h6" />
+          <circle cx="12" cy="9" r="1.6" fill="currentColor" stroke="none" />
+          <path d="M7.5 11.5a6 6 0 0 1 0-5" />
+          <path d="M16.5 11.5a6 6 0 0 0 0-5" />
+          <path d="M5 13a9 9 0 0 1 0-8" />
+          <path d="M19 13a9 9 0 0 0 0-8" />
+        </svg>
+      );
+
+    case "healthcare":
+      // Shield with medical cross.
+      return (
+        <svg {...common}>
+          <path d="M12 3l8 3v6c0 5-3.5 9.4-8 11-4.5-1.6-8-6-8-11V6z" />
+          <path d="M12 9v6M9 12h6" />
+        </svg>
+      );
+
+    case "retail":
+      // Shopping bag with twin handles.
+      return (
+        <svg {...common}>
+          <path d="M5 8h14l-1 12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z" />
+          <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+        </svg>
+      );
+
+    case "logistics":
+      // Delivery truck — cab + box + wheels.
+      return (
+        <svg {...common}>
+          <rect x="2" y="7" width="12" height="9" rx="1" />
+          <path d="M14 10h4l3 3v3h-7z" />
+          <circle cx="6" cy="18" r="1.8" />
+          <circle cx="17" cy="18" r="1.8" />
+        </svg>
+      );
+
+    case "government":
+      // Columned classical building.
+      return (
+        <svg {...common}>
+          <path d="M3 9l9-5 9 5" />
+          <path d="M4 9v11M20 9v11" />
+          <path d="M8 11v7M12 11v7M16 11v7" />
+          <path d="M3 20h18" />
+        </svg>
+      );
+
+    case "bank":
+      // Bank columns + pediment.
+      return (
+        <svg {...common}>
+          <path d="M3 10l9-6 9 6" />
+          <path d="M5 10v8M19 10v8M9 10v8M15 10v8" />
+          <path d="M3 20h18" />
+          <path d="M3 22h18" />
         </svg>
       );
 

@@ -11,12 +11,12 @@ import { LocalizedLink } from "../i18n/LocalizedLink";
 import { useT } from "../i18n/useT";
 import styles from "./AboutCompany.module.css";
 
-const UAE_LEADERSHIP = [
-  { name: "Apoorva Gowda", role: "Sales Manager, UAE", region: "UAE" },
-  { name: "Arup Saroji",   role: "Strategy Consultant, UAE", region: "UAE", note: "Name spelling pending HR confirmation." },
-] as const;
-
 type LeaderTone = "orange" | "blue" | "purple" | "green" | "yellow" | "ink";
+
+const UAE_LEADERSHIP: ReadonlyArray<{ readonly name: string; readonly role: string; readonly region: string; readonly tone: LeaderTone; readonly note?: string }> = [
+  { name: "Apoorva Gowda", role: "Sales Manager, UAE",      region: "UAE", tone: "orange" },
+  { name: "Arup Saroji",   role: "Strategy Consultant, UAE", region: "UAE", tone: "blue", note: "Name spelling pending HR confirmation." },
+];
 
 const GLOBAL_LEADERSHIP: ReadonlyArray<{ readonly name: string; readonly role: string; readonly tone: LeaderTone }> = [
   { name: "Rahul Madke",         role: "Founder & CEO",                 tone: "orange" },
@@ -118,7 +118,7 @@ export function AboutCompany() {
           <div className={styles.uaeGrid}>
             {UAE_LEADERSHIP.map((p, i) => (
               <Reveal key={p.name} delay={i * 100}>
-                <PersonCard variant="card" name={p.name} role={p.role} region={p.region} note={(p as { note?: string }).note} />
+                <PersonCard flippable tone={p.tone} name={p.name} role={p.role} region={p.region} note={p.note} />
               </Reveal>
             ))}
           </div>

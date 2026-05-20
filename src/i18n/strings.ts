@@ -75,6 +75,47 @@ const EN: Dict = {
   "lang.switchToEnglish": "Switch to English",
   "lang.fallbackBanner": "This page is available in English only. The Arabic version is coming soon.",
 
+  // Theme toggle
+  "theme.switchToDark": "Switch to dark mode",
+  "theme.switchToLight": "Switch to light mode",
+
+  // Hero animation labels — Home
+  "heroAnim.home.platform": "Platform",
+  "heroAnim.home.analytics.title": "Analytics",
+  "heroAnim.home.analytics.sub": "Qlik · Power BI",
+  "heroAnim.home.ai.title": "AI Agents",
+  "heroAnim.home.ai.sub": "LLM · RAG",
+  "heroAnim.home.pipelines.title": "Pipelines",
+  "heroAnim.home.pipelines.sub": "Snowflake",
+  "heroAnim.home.managed.title": "Managed",
+  "heroAnim.home.managed.sub": "24/7 NOC",
+
+  // Hero animation labels — Careers
+  "heroAnim.careers.engineer": "Engineer",
+  "heroAnim.careers.lead":     "Lead",
+  "heroAnim.careers.architect": "Architect",
+  "heroAnim.careers.onboarding": "Onboarding",
+  "heroAnim.careers.delivery": "Delivery",
+  "heroAnim.careers.practice": "Practice",
+  "heroAnim.careers.promotions": "internal promotions / yr",
+
+  // Hero animation labels — Customer Stories
+  "heroAnim.stories.q1.body": "Closed the loop on claims TAT — we now see it before the customer calls.",
+  "heroAnim.stories.q1.who":  "VP Operations",
+  "heroAnim.stories.q1.where": "Regional insurer · UAE",
+  "heroAnim.stories.q2.body": "Sub-minute pipeline. Audit caught nothing. That alone justified the engagement.",
+  "heroAnim.stories.q2.who":  "Head of Data",
+  "heroAnim.stories.q2.where": "Upstream operator · Oman",
+  "heroAnim.stories.q3.body": "Went live in 14 days — and stuck. The team owns the dashboard now.",
+  "heroAnim.stories.q3.who":  "Director, IT Services",
+  "heroAnim.stories.q3.where": "Tech & IT · Dubai",
+  "heroAnim.stories.kpi1": "TAT reduction",
+  "heroAnim.stories.kpi2": "retention",
+
+  // Hero animation labels — Partnerships
+  "heroAnim.partner.partnerOfRecord": "Partner of record",
+  "heroAnim.partner.network": "Network",
+
   // Home — hero
   "home.hero.eyebrow": "⚡ New · AI agents for enterprise ops",
   "home.hero.headlineA": "Connect your data, AI,",
@@ -580,6 +621,47 @@ const AR: Dict = {
   "lang.switchToArabic": "التبديل إلى العربية",
   "lang.switchToEnglish": "Switch to English",
   "lang.fallbackBanner": "هذه الصفحة متاحة حالياً باللغة الإنجليزية فقط. النسخة العربية قريباً.",
+
+  // Theme toggle
+  "theme.switchToDark": "التبديل إلى الوضع الداكن",
+  "theme.switchToLight": "التبديل إلى الوضع الفاتح",
+
+  // Hero animation labels — Home
+  "heroAnim.home.platform": "المنصة",
+  "heroAnim.home.analytics.title": "التحليلات",
+  "heroAnim.home.analytics.sub": "Qlik · Power BI",
+  "heroAnim.home.ai.title": "وكلاء الذكاء الاصطناعي",
+  "heroAnim.home.ai.sub": "LLM · RAG",
+  "heroAnim.home.pipelines.title": "خطوط البيانات",
+  "heroAnim.home.pipelines.sub": "Snowflake",
+  "heroAnim.home.managed.title": "خدمات مُدارة",
+  "heroAnim.home.managed.sub": "مركز عمليات 24/7",
+
+  // Hero animation labels — Careers
+  "heroAnim.careers.engineer": "مهندس",
+  "heroAnim.careers.lead":     "قائد",
+  "heroAnim.careers.architect": "مهندس حلول",
+  "heroAnim.careers.onboarding": "التأهيل",
+  "heroAnim.careers.delivery": "التسليم",
+  "heroAnim.careers.practice": "الممارسة",
+  "heroAnim.careers.promotions": "ترقيات داخلية / سنة",
+
+  // Hero animation labels — Customer Stories
+  "heroAnim.stories.q1.body": "أغلقنا فجوة زمن معالجة المطالبات — أصبحنا نراها قبل أن يتصل العميل.",
+  "heroAnim.stories.q1.who":  "نائب رئيس العمليات",
+  "heroAnim.stories.q1.where": "شركة تأمين إقليمية · الإمارات",
+  "heroAnim.stories.q2.body": "خط أنابيب بزمن أقل من دقيقة. لم يُسجَّل التدقيق أي ملاحظة — هذا وحده برّر المشروع.",
+  "heroAnim.stories.q2.who":  "رئيس قسم البيانات",
+  "heroAnim.stories.q2.where": "شركة تشغيل أولية · عُمان",
+  "heroAnim.stories.q3.body": "أُطلق في 14 يومًا — وبقي. الفريق يدير لوحة المعلومات الآن.",
+  "heroAnim.stories.q3.who":  "مدير خدمات تقنية المعلومات",
+  "heroAnim.stories.q3.where": "تقنية ومعلومات · دبي",
+  "heroAnim.stories.kpi1": "خفض زمن المعالجة",
+  "heroAnim.stories.kpi2": "الاحتفاظ",
+
+  // Hero animation labels — Partnerships
+  "heroAnim.partner.partnerOfRecord": "شريك معتمد",
+  "heroAnim.partner.network": "شبكة",
 
   // Home — hero
   "home.hero.eyebrow": "⚡ جديد · وكلاء ذكاء اصطناعي لعمليات المؤسسات",

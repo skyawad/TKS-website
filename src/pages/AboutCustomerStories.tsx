@@ -56,10 +56,13 @@ export function AboutCustomerStories() {
               subtext={t("stories.section.sub")}
             />
           </Reveal>
-          <div className={styles.cardGrid2}>
+          <ol className={styles.storyList}>
             {STORIES.map((s, i) => (
-              <Reveal key={s.id} delay={i * 100}>
-                <article className={styles.storyCard}>
+              <Reveal key={s.id} delay={i * 100} as="li" className={styles.storyEntry}>
+                <span className={styles.storyIndex} aria-hidden="true">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className={styles.storyContent}>
                   <span className={styles.storyTag}>{t(`stories.${s.id}.industry`)}</span>
                   <h3 className={styles.storyHeadline}>{t(`stories.${s.id}.headline`)}</h3>
                   <p className={styles.storyBody}>{t(`stories.${s.id}.body`)}</p>
@@ -71,10 +74,10 @@ export function AboutCustomerStories() {
                       </div>
                     ))}
                   </div>
-                </article>
+                </div>
               </Reveal>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 

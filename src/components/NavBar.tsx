@@ -4,7 +4,9 @@ import { PRIMARY_NAV } from "../data/nav";
 import { LocalizedLink, LocalizedNavLink } from "../i18n/LocalizedLink";
 import { useT } from "../i18n/useT";
 import { Button } from "./Button";
+import { Icon } from "./Icon";
 import { LanguageSwitch } from "./LanguageSwitch";
+import { ThemeToggle } from "./ThemeToggle";
 import styles from "./NavBar.module.css";
 
 const MEGA_CLOSE_DELAY_MS = 150;
@@ -136,7 +138,13 @@ export function NavBar() {
                                       .join(" ")
                                   }
                                 >
+                                  {child.iconName && (
+                                    <span className={styles.megaIcon} aria-hidden="true">
+                                      <Icon name={child.iconName} size={18} />
+                                    </span>
+                                  )}
                                   <span className={styles.megaLinkTitle}>{t(child.labelKey)}</span>
+                                  <span className={styles.megaArrow} aria-hidden="true">→</span>
                                 </LocalizedNavLink>
                               </li>
                             ))}
@@ -163,6 +171,7 @@ export function NavBar() {
         </nav>
 
         <div className={styles.actions}>
+          <ThemeToggle />
           <LanguageSwitch />
           <LocalizedLink to="/contact">
             <Button variant="dark" size="sm">
@@ -205,7 +214,12 @@ export function NavBar() {
                           className={styles.mobileChild}
                           onClick={handleMobileLinkClick}
                         >
-                          {t(child.labelKey)}
+                          {child.iconName && (
+                            <span className={styles.mobileChildIcon} aria-hidden="true">
+                              <Icon name={child.iconName} size={16} />
+                            </span>
+                          )}
+                          <span>{t(child.labelKey)}</span>
                         </LocalizedNavLink>
                       </li>
                     ))}
@@ -220,6 +234,7 @@ export function NavBar() {
             </li>
             <li className={styles.mobileLangSwitch}>
               <LanguageSwitch />
+              <ThemeToggle />
             </li>
           </ul>
         </div>

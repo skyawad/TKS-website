@@ -178,6 +178,7 @@ export function ServiceDetailPage({ data }: { data: ServiceDetail }) {
             eyebrow="Use cases"
             heading={data.useCases.heading ?? "Real shipments"}
             subtext={data.useCases.sub}
+            tone="positive"
           />
           <div className={styles.gridTwo}>
             {data.useCases.cards.map((u) => (

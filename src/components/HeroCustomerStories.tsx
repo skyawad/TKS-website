@@ -1,3 +1,4 @@
+import { useT } from "../i18n/useT";
 import styles from "./HeroCustomerStories.module.css";
 
 /**
@@ -6,42 +7,43 @@ import styles from "./HeroCustomerStories.module.css";
  * floating outcome KPI tile. Implies "many proof points".
  */
 export function HeroCustomerStories() {
+  const t = useT();
   return (
     <div className={styles.scene} aria-hidden="true">
       <div className={`${styles.quoteCard} ${styles.q1}`}>
         <span className={styles.glyph}>&ldquo;</span>
-        <p className={styles.qBody}>Closed the loop on claims TAT — we now see it before the customer calls.</p>
+        <p className={styles.qBody}>{t("heroAnim.stories.q1.body")}</p>
         <div className={styles.qFoot}>
-          <span className={styles.qWho}>VP Operations</span>
-          <span className={styles.qWhere}>Regional insurer · UAE</span>
+          <span className={styles.qWho}>{t("heroAnim.stories.q1.who")}</span>
+          <span className={styles.qWhere}>{t("heroAnim.stories.q1.where")}</span>
         </div>
       </div>
 
       <div className={`${styles.quoteCard} ${styles.q2}`}>
         <span className={styles.glyph}>&ldquo;</span>
-        <p className={styles.qBody}>Sub-minute pipeline. Audit caught nothing. That alone justified the engagement.</p>
+        <p className={styles.qBody}>{t("heroAnim.stories.q2.body")}</p>
         <div className={styles.qFoot}>
-          <span className={styles.qWho}>Head of Data</span>
-          <span className={styles.qWhere}>Upstream operator · Oman</span>
+          <span className={styles.qWho}>{t("heroAnim.stories.q2.who")}</span>
+          <span className={styles.qWhere}>{t("heroAnim.stories.q2.where")}</span>
         </div>
       </div>
 
       <div className={`${styles.quoteCard} ${styles.q3}`}>
         <span className={styles.glyph}>&ldquo;</span>
-        <p className={styles.qBody}>Went live in 14 days — and stuck. The team owns the dashboard now.</p>
+        <p className={styles.qBody}>{t("heroAnim.stories.q3.body")}</p>
         <div className={styles.qFoot}>
-          <span className={styles.qWho}>Director, IT Services</span>
-          <span className={styles.qWhere}>Tech &amp; IT · Dubai</span>
+          <span className={styles.qWho}>{t("heroAnim.stories.q3.who")}</span>
+          <span className={styles.qWhere}>{t("heroAnim.stories.q3.where")}</span>
         </div>
       </div>
 
       <div className={`${styles.kpi} ${styles.kpiTop}`}>
         <span className={styles.kpiVal}>22%</span>
-        <span className={styles.kpiLabel}>TAT reduction</span>
+        <span className={styles.kpiLabel}>{t("heroAnim.stories.kpi1")}</span>
       </div>
       <div className={`${styles.kpi} ${styles.kpiBot}`}>
         <span className={styles.kpiVal}>5★</span>
-        <span className={styles.kpiLabel}>retention</span>
+        <span className={styles.kpiLabel}>{t("heroAnim.stories.kpi2")}</span>
       </div>
     </div>
   );

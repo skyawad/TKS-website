@@ -3,6 +3,7 @@ import { Layout } from "./components/Layout";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { SiteLoader } from "./components/SiteLoader";
 import { LanguageProvider } from "./i18n/LanguageContext";
+import { ThemeProvider } from "./theme/ThemeContext";
 import { AboutCareers } from "./pages/AboutCareers";
 import { AboutCompany } from "./pages/AboutCompany";
 import { AboutCustomerStories } from "./pages/AboutCustomerStories";
@@ -55,6 +56,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <SiteLoader />
+      <ThemeProvider>
       <LanguageProvider>
         <ScrollToTop />
         <Routes>
@@ -88,6 +90,7 @@ export default function App() {
           <Route path="/*" element={<SiteRoutes />} />
         </Routes>
       </LanguageProvider>
+      </ThemeProvider>
     </BrowserRouter>
   );
 }

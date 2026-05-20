@@ -1,7 +1,7 @@
 import type { HTMLAttributes, ReactNode } from "react";
 import styles from "./Pill.module.css";
 
-type Variant = "brand" | "neutral" | "mono";
+type Variant = "brand" | "neutral" | "mono" | "positive" | "info";
 
 export interface PillProps extends HTMLAttributes<HTMLSpanElement> {
   variant?: Variant;

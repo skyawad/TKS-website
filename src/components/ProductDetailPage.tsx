@@ -13,6 +13,7 @@ import { SectionHeader } from "./SectionHeader";
 import { UseCaseCard } from "./UseCaseCard";
 import styles from "./ProductDetailPage.module.css";
 import type { ProductDetail } from "../data/product-detail";
+import { industryIcon } from "../lib/industryIcon";
 
 interface ProductDetailPageProps {
   data: ProductDetail;
@@ -121,17 +122,32 @@ export function ProductDetailPage({ data, illustration }: ProductDetailPageProps
               eyebrow="Industries served"
               heading="Where it ships."
               subtext={data.industries.sub}
+              tone="info"
             />
           </Reveal>
           <div className={styles.industryGrid}>
-            {data.industries.tiles.map((t, i) => (
-              <Reveal key={t.name} delay={i * 50}>
-                <div className={styles.industryTile}>
-                  <h4>{t.name}</h4>
-                  <p>{t.value}</p>
-                </div>
-              </Reveal>
-            ))}
+            {data.industries.tiles.map((t, i) => {
+              const iconName = industryIcon(t.name);
+              return (
+                <Reveal key={t.name} delay={i * 50}>
+                  <div className={styles.industryTile}>
+                    <div className={styles.industryHead}>
+                      {iconName ? (
+                        <span className={styles.industryIcon} aria-hidden="true">
+                          <Icon name={iconName} size={18} />
+                        </span>
+                      ) : (
+                        <span className={styles.industryMonogram} aria-hidden="true">
+                          {t.name.trim().charAt(0).toUpperCase()}
+                        </span>
+                      )}
+                      <h4>{t.name}</h4>
+                    </div>
+                    <p>{t.value}</p>
+                  </div>
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -156,6 +172,7 @@ export function ProductDetailPage({ data, illustration }: ProductDetailPageProps
               eyebrow="Use cases"
               heading="In production."
               subtext={data.useCases.sub}
+              tone="positive"
             />
           </Reveal>
           <div className={styles.useCaseGrid}>

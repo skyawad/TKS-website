@@ -1,3 +1,4 @@
+import { useT } from "../i18n/useT";
 import styles from "./HeroCareers.module.css";
 
 /**
@@ -6,6 +7,7 @@ import styles from "./HeroCareers.module.css";
  * and a small "people" cluster — communicates upward mobility.
  */
 export function HeroCareers() {
+  const t = useT();
   return (
     <div className={styles.scene} aria-hidden="true">
       <svg className={styles.arrow} viewBox="0 0 320 320" preserveAspectRatio="none">
@@ -23,20 +25,20 @@ export function HeroCareers() {
 
       <div className={`${styles.stepCard} ${styles.s1}`}>
         <span className={styles.stepRank}>L1</span>
-        <span className={styles.stepRole}>Engineer</span>
-        <span className={styles.stepBadge}>Onboarding</span>
+        <span className={styles.stepRole}>{t("heroAnim.careers.engineer")}</span>
+        <span className={styles.stepBadge}>{t("heroAnim.careers.onboarding")}</span>
       </div>
 
       <div className={`${styles.stepCard} ${styles.s2}`}>
         <span className={styles.stepRank}>L3</span>
-        <span className={styles.stepRole}>Lead</span>
-        <span className={styles.stepBadge}>Delivery</span>
+        <span className={styles.stepRole}>{t("heroAnim.careers.lead")}</span>
+        <span className={styles.stepBadge}>{t("heroAnim.careers.delivery")}</span>
       </div>
 
       <div className={`${styles.stepCard} ${styles.s3}`}>
         <span className={styles.stepRank}>L5</span>
-        <span className={styles.stepRole}>Architect</span>
-        <span className={styles.stepBadge}>Practice</span>
+        <span className={styles.stepRole}>{t("heroAnim.careers.architect")}</span>
+        <span className={styles.stepBadge}>{t("heroAnim.careers.practice")}</span>
       </div>
 
       <div className={styles.team}>
@@ -48,7 +50,7 @@ export function HeroCareers() {
 
       <div className={styles.metric}>
         <span className={styles.metricVal}>+38%</span>
-        <span className={styles.metricLabel}>internal promotions / yr</span>
+        <span className={styles.metricLabel}>{t("heroAnim.careers.promotions")}</span>
       </div>
     </div>
   );

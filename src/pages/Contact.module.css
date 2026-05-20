@@ -61,6 +61,18 @@
   border-color: var(--whatsapp-green);
 }
 
+.methodCardInfo {
+  background: linear-gradient(135deg, #3DA9FF 0%, #1E78E0 100%);
+  color: #FFFFFF;
+  border-color: rgba(61, 169, 255, 0.6);
+  box-shadow: 0 8px 22px rgba(30, 120, 224, 0.18);
+}
+
+.methodCardInfo .methodLabel { color: rgba(255, 255, 255, 0.88); }
+.methodCardInfo .methodValue { color: #FFFFFF; }
+.methodCardInfo .methodNote  { color: rgba(255, 255, 255, 0.9); }
+.methodCardInfo a            { color: #FFFFFF; }
+
 .methodLabel {
   font-family: var(--font-mono);
   font-size: var(--t-label);

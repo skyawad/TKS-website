@@ -1,4 +1,5 @@
 import { Icon } from "./Icon";
+import { useT } from "../i18n/useT";
 import styles from "./HeroHome.module.css";
 
 /**
@@ -10,6 +11,7 @@ import styles from "./HeroHome.module.css";
  * across data, AI, and ops" value prop visually.
  */
 export function HeroHome() {
+  const t = useT();
   return (
     <div className={styles.scene} aria-hidden="true">
       {/* Connector lines + flowing dots */}
@@ -37,11 +39,23 @@ export function HeroHome() {
 
       {/* Central platform hub */}
       <div className={styles.hub}>
-        <div className={styles.hubRing} />
-        <div className={styles.hubRing2} />
+        <svg className={styles.orbit} viewBox="0 0 220 220">
+          <circle
+            className={styles.orbitRing}
+            cx="110" cy="110" r="98"
+            fill="none" stroke="currentColor" strokeWidth="1.5"
+            strokeDasharray="6 8"
+          />
+          <circle
+            className={styles.orbitRingInner}
+            cx="110" cy="110" r="68"
+            fill="none" stroke="currentColor" strokeWidth="1"
+            strokeDasharray="3 6"
+          />
+        </svg>
         <div className={styles.hubCore}>
           <span className={styles.hubMark}>TKS</span>
-          <span className={styles.hubLabel}>Platform</span>
+          <span className={styles.hubLabel}>{t("heroAnim.home.platform")}</span>
         </div>
       </div>
 
@@ -51,8 +65,8 @@ export function HeroHome() {
           <Icon name="analytics" size={16} />
         </div>
         <div className={styles.capBody}>
-          <span className={styles.capLabel}>Analytics</span>
-          <span className={styles.capSub}>Qlik · Power BI</span>
+          <span className={styles.capLabel}>{t("heroAnim.home.analytics.title")}</span>
+          <span className={styles.capSub}>{t("heroAnim.home.analytics.sub")}</span>
         </div>
       </div>
       <div className={`${styles.cap} ${styles.capTr}`}>
@@ -60,8 +74,8 @@ export function HeroHome() {
           <Icon name="ai-strategy" size={16} />
         </div>
         <div className={styles.capBody}>
-          <span className={styles.capLabel}>AI Agents</span>
-          <span className={styles.capSub}>LLM · RAG</span>
+          <span className={styles.capLabel}>{t("heroAnim.home.ai.title")}</span>
+          <span className={styles.capSub}>{t("heroAnim.home.ai.sub")}</span>
         </div>
       </div>
       <div className={`${styles.cap} ${styles.capBl}`}>
@@ -69,8 +83,8 @@ export function HeroHome() {
           <Icon name="data-eng" size={16} />
         </div>
         <div className={styles.capBody}>
-          <span className={styles.capLabel}>Pipelines</span>
-          <span className={styles.capSub}>Snowflake</span>
+          <span className={styles.capLabel}>{t("heroAnim.home.pipelines.title")}</span>
+          <span className={styles.capSub}>{t("heroAnim.home.pipelines.sub")}</span>
         </div>
       </div>
       <div className={`${styles.cap} ${styles.capBr}`}>
@@ -78,8 +92,8 @@ export function HeroHome() {
           <Icon name="managed" size={16} />
         </div>
         <div className={styles.capBody}>
-          <span className={styles.capLabel}>Managed</span>
-          <span className={styles.capSub}>24/7 NOC</span>
+          <span className={styles.capLabel}>{t("heroAnim.home.managed.title")}</span>
+          <span className={styles.capSub}>{t("heroAnim.home.managed.sub")}</span>
         </div>
       </div>
 

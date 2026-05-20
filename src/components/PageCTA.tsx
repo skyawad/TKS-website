@@ -33,9 +33,26 @@ export function PageCTA({
 
   return (
     <section className={styles.cta}>
+      <div className={styles.frame}>
+        <span className={styles.neon} aria-hidden="true" />
       <div className={styles.inner}>
         {/* Decorative layers — purely visual, hidden from a11y tree */}
         <span className={styles.diagonal} aria-hidden="true" />
+
+        {/* Bottom-left trend line — share-market-style jagged path that draws
+            from the very bottom-left, ends top-right. Reverses on hover-leave. */}
+        <svg
+          className={styles.trend}
+          viewBox="0 0 120 56"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <polyline
+            points="0,56 5,53 9,55 14,49 19,52 24,46 29,50 34,42 39,46 44,38 49,44 54,36 59,40 64,30 69,34 74,26 79,32 84,22 89,28 94,18 100,24 105,14 110,18 115,8 120,4"
+            className={styles.trendLine}
+          />
+          <circle cx="120" cy="4" r="3.5" className={styles.trendHead} />
+        </svg>
 
         {/* Insights composition — bar chart + sparkline tucked into the
             bottom-right corner. Purely decorative; reflects the practice
@@ -122,6 +139,7 @@ export function PageCTA({
             </>
           )}
         </div>
+      </div>
       </div>
     </section>
   );

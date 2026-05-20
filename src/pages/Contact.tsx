@@ -56,6 +56,7 @@ export function Contact() {
                   value={CONTACT.phoneDisplay}
                   href={`tel:${CONTACT.phoneTel}`}
                   note={t("contact.method.phoneNote")}
+                  accent="info"
                 />
               </Reveal>
               <Reveal delay={200}>
@@ -206,7 +207,7 @@ interface ContactMethodProps {
   readonly href: string;
   readonly note?: string;
   readonly external?: boolean;
-  readonly accent?: "default" | "whatsapp";
+  readonly accent?: "default" | "whatsapp" | "info";
 }
 
 function ContactMethod({
@@ -220,6 +221,7 @@ function ContactMethod({
   const className = [
     styles.methodCard,
     accent === "whatsapp" ? styles.methodCardWhatsapp : "",
+    accent === "info"     ? styles.methodCardInfo     : "",
   ]
     .filter(Boolean)
     .join(" ");

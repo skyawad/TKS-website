@@ -1,3 +1,4 @@
+import { useT } from "../i18n/useT";
 import styles from "./HeroPartnerships.module.css";
 
 /**
@@ -6,6 +7,7 @@ import styles from "./HeroPartnerships.module.css";
  * an animated dashed ring — communicates alliance and integration.
  */
 export function HeroPartnerships() {
+  const t = useT();
   return (
     <div className={styles.scene} aria-hidden="true">
       <svg className={styles.orbit} viewBox="0 0 320 320">
@@ -33,7 +35,7 @@ export function HeroPartnerships() {
 
       <div className={styles.hub}>
         <span className={styles.hubMark}>TKS</span>
-        <span className={styles.hubSub}>Partner of record</span>
+        <span className={styles.hubSub}>{t("heroAnim.partner.partnerOfRecord")}</span>
       </div>
 
       <div className={`${styles.node} ${styles.n1}`}>
@@ -50,7 +52,7 @@ export function HeroPartnerships() {
       </div>
       <div className={`${styles.node} ${styles.n4}`}>
         <span className={styles.nodeMark}>+</span>
-        <span className={styles.nodeName}>Network</span>
+        <span className={styles.nodeName}>{t("heroAnim.partner.network")}</span>
       </div>
 
       <div className={`${styles.pulse} ${styles.p1}`} />

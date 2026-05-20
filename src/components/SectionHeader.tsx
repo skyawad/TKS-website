@@ -10,6 +10,8 @@ export interface SectionHeaderProps {
   subtext?: ReactNode;
   as?: HeadingLevel;
   align?: "left" | "center";
+  /** Tone for the heading + eyebrow pill. */
+  tone?: "default" | "positive" | "info";
 }
 
 export function SectionHeader({
@@ -18,16 +20,26 @@ export function SectionHeader({
   subtext,
   as = "h2",
   align = "left",
+  tone = "default",
 }: SectionHeaderProps) {
   const HeadingTag = as as keyof JSX.IntrinsicElements;
+  const toneClass =
+    tone === "positive" ? styles.headingPositive :
+    tone === "info"     ? styles.headingInfo :
+    "";
+  const headingClass = [styles.heading, toneClass].filter(Boolean).join(" ");
+  const pillVariant =
+    tone === "positive" ? "positive" :
+    tone === "info"     ? "info" :
+    "brand";
   return (
     <header className={[styles.header, styles[align]].join(" ")}>
       {eyebrow && (
         <div className={styles.eyebrow}>
-          <Pill variant="brand">{eyebrow}</Pill>
+          <Pill variant={pillVariant}>{eyebrow}</Pill>
         </div>
       )}
-      <HeadingTag className={styles.heading}>{heading}</HeadingTag>
+      <HeadingTag className={headingClass}>{heading}</HeadingTag>
       {subtext && <p className={styles.subtext}>{subtext}</p>}
     </header>
   );
