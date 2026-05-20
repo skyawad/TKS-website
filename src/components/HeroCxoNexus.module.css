@@ -9,14 +9,16 @@
   top: 14px;
   left: 14px;
   right: 14px;
-  background: var(--brand);
-  color: var(--canvas);
+  background: var(--canvas);
+  color: var(--ink);
+  border: var(--card-edge);
+  border-left: 3px solid var(--brand);
   border-radius: var(--r-md);
-  box-shadow: var(--shadow-3);
+  box-shadow: var(--shadow-2);
   padding: 10px 14px;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
   animation: bob 5s ease-in-out infinite;
   z-index: 2;
 }
@@ -24,9 +26,10 @@
 .qLabel {
   font-family: var(--font-mono);
   font-size: 10px;
+  font-weight: 700;
   letter-spacing: var(--ls-caps);
   text-transform: uppercase;
-  opacity: 0.85;
+  color: var(--brand);
 }
 
 .qText {
@@ -34,21 +37,22 @@
   font-size: 14px;
   font-weight: 600;
   font-style: italic;
+  color: var(--ink);
 }
 
 .chart {
   position: absolute;
-  top: 100px;
+  top: 84px;
   left: 14px;
   right: 14px;
   background: var(--canvas);
   border: var(--card-edge);
   border-radius: var(--r-lg);
   box-shadow: var(--shadow-3);
-  padding: 14px;
+  padding: 12px 14px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   animation: bob 5s ease-in-out infinite -1s;
 }
 
@@ -79,7 +83,7 @@
   display: flex;
   align-items: flex-end;
   gap: 8px;
-  height: 90px;
+  height: 78px;
 }
 
 .barCol {
@@ -132,8 +136,18 @@
 .dotPlan   { background: var(--surface-2); }
 .dotActual { background: var(--brand); }
 
-.kpi {
+.kpiRow {
   position: absolute;
+  bottom: 12px;
+  left: 14px;
+  right: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  z-index: 3;
+}
+
+.kpi {
   background: var(--canvas);
   border: var(--card-edge);
   border-radius: var(--r-md);
@@ -143,11 +157,10 @@
   flex-direction: column;
   gap: 2px;
   animation: bob 5s ease-in-out infinite;
-  z-index: 3;
 }
 
-.kTL { top: 70px;  left: -8px;  animation-delay: -2s; }
-.kBR { bottom: 18px; right: -8px; animation-delay: -3.5s; }
+.kpi:nth-child(1) { animation-delay: -2s; }
+.kpi:nth-child(2) { animation-delay: -3.5s; }
 
 .kpi strong {
   font-family: var(--font-display);

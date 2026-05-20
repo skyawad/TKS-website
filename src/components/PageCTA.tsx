@@ -34,7 +34,63 @@ export function PageCTA({
   return (
     <section className={styles.cta}>
       <div className={styles.inner}>
-        {eyebrow && <div className={styles.eyebrow}>{eyebrow}</div>}
+        {/* Decorative layers — purely visual, hidden from a11y tree */}
+        <span className={styles.diagonal} aria-hidden="true" />
+
+        {/* Insights composition — bar chart + sparkline tucked into the
+            bottom-right corner. Purely decorative; reflects the practice
+            (dashboards / AI / data engineering) without competing with the
+            CTA text. */}
+        <svg
+          className={styles.chart}
+          viewBox="0 0 200 110"
+          preserveAspectRatio="xMaxYMax meet"
+          aria-hidden="true"
+        >
+          <g className={styles.gridLines}>
+            <line x1="0" y1="30"  x2="200" y2="30"  />
+            <line x1="0" y1="60"  x2="200" y2="60"  />
+            <line x1="0" y1="90"  x2="200" y2="90"  />
+          </g>
+
+          <g className={styles.bars}>
+            <rect x="6"   y="56"  width="20" height="48" className={styles.bar1} />
+            <rect x="34"  y="44"  width="20" height="60" className={styles.bar2} />
+            <rect x="62"  y="34"  width="20" height="70" className={styles.bar3} />
+            <rect x="90"  y="48"  width="20" height="56" className={styles.bar4} />
+            <rect x="118" y="26"  width="20" height="78" className={styles.bar5} />
+            <rect x="146" y="14"  width="20" height="90" className={styles.bar6} />
+          </g>
+
+          <path
+            className={styles.sparkLine}
+            d="M 6 68 L 44 56 L 82 42 L 120 52 L 158 32 L 196 16"
+            fill="none"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          {/* Live glow head — continuously travels the line after the initial draw,
+              giving the chart a "live data feed" feel. */}
+          <circle r="3.5" className={styles.livePulse}>
+            <animateMotion
+              dur="4.5s"
+              repeatCount="indefinite"
+              begin="1.6s"
+              calcMode="spline"
+              keyTimes="0;1"
+              keySplines="0.4 0 0.6 1"
+              path="M 6 68 L 44 56 L 82 42 L 120 52 L 158 32 L 196 16"
+            />
+          </circle>
+        </svg>
+
+        {eyebrow && (
+          <div className={styles.eyebrow}>
+            <span className={styles.eyebrowDot} aria-hidden="true" />
+            <span className={styles.eyebrowText}>{eyebrow}</span>
+          </div>
+        )}
         <h2 className={styles.headline}>{headline}</h2>
         {sub && <p className={styles.sub}>{sub}</p>}
         <div className={styles.actions}>

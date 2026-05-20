@@ -31,13 +31,15 @@ export function HeroCxoNexus() {
         </div>
       </div>
 
-      <div className={`${styles.kpi} ${styles.kTL}`}>
-        <strong>AED 4.2M</strong>
-        <span>Revenue Q1</span>
-      </div>
-      <div className={`${styles.kpi} ${styles.kBR}`}>
-        <strong>+8.4%</strong>
-        <span>vs plan</span>
+      <div className={styles.kpiRow}>
+        <div className={styles.kpi}>
+          <strong>AED 4.2M</strong>
+          <span>Revenue Q1</span>
+        </div>
+        <div className={styles.kpi}>
+          <strong>+8.4%</strong>
+          <span>vs plan</span>
+        </div>
       </div>
     </div>
   );

@@ -1,335 +1,336 @@
 .scene {
   position: relative;
   width: 100%;
-  height: 360px;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 8px 4px;
 }
 
 /* ============================================================
-   Rotating orbit ring — sits behind the avatar cluster
+   Top row — Since 2014 · 3 regions (small framing tags)
    ============================================================ */
-.orbitWrap {
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 280px;
-  height: 280px;
-  pointer-events: none;
-  animation: orbitSpin 30s linear infinite;
-  z-index: 0;
+.headRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
 }
 
-.orbit {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-@keyframes orbitSpin {
-  0%   { transform: translateX(-50%) rotate(0); }
-  100% { transform: translateX(-50%) rotate(360deg); }
-}
-
-/* ============================================================
-   Network connectors between avatars + traveling pulses
-   ============================================================ */
-.network {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 200px;
-  width: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.link {
-  fill: none;
-  stroke: var(--brand-tint);
-  stroke-width: 1.5;
-  stroke-dasharray: 3 4;
-  opacity: 0.75;
-}
-
-.pulseDot {
-  filter: drop-shadow(0 0 5px currentColor);
-}
-
-/* ============================================================
-   Avatar cluster (existing) — bumped z-index so it sits above orbit
-   ============================================================ */
-.cluster {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 200px;
-  z-index: 2;
-}
-
-.avatar {
-  position: absolute;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  color: var(--canvas);
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 16px;
-  display: grid;
-  place-items: center;
-  box-shadow: var(--shadow-3);
-  border: 3px solid var(--canvas);
-  opacity: 0;
-  animation: avatarIn 0.5s ease-out forwards, halo 4s ease-in-out infinite;
-}
-
-@keyframes avatarIn {
-  0%   { opacity: 0; transform: translateY(10px) scale(0.7); }
-  100% { opacity: 1; transform: translateY(0)   scale(1);   }
-}
-
-@keyframes halo {
-  0%, 92%, 100% { box-shadow: var(--shadow-3); }
-  4%, 8%        { box-shadow: var(--shadow-3), 0 0 0 6px rgba(255, 74, 0, 0.25); }
-}
-
-.a1 { top: 10px;  left: 30px;  animation-delay: 0s,   0s;   z-index: 6; }
-.a2 { top: 30px;  left: 110px; animation-delay: 0.1s, 0.5s; z-index: 5; }
-.a3 { top: 0;     left: 200px; animation-delay: 0.2s, 1.0s; z-index: 4; }
-.a4 { top: 80px;  left: 270px; animation-delay: 0.3s, 1.5s; z-index: 3; }
-.a5 { top: 110px; left: 170px; animation-delay: 0.4s, 2.0s; z-index: 7; }
-.a6 { top: 130px; left: 60px;  animation-delay: 0.5s, 2.5s; z-index: 4; }
-.a7 { top: 70px;  left: 0;     animation-delay: 0.6s, 3.0s; z-index: 3; }
-
-/* ============================================================
-   Since-2014 shimmer badge — top-right corner
-   ============================================================ */
-.sinceBadge {
-  position: absolute;
-  top: 0;
-  right: 0;
+.sinceTag,
+.regionTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background: var(--canvas);
   border: var(--card-edge);
   border-radius: var(--r-pill);
-  box-shadow: var(--shadow-3);
-  padding: 8px 14px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  z-index: 3;
-  overflow: hidden;
-  isolation: isolate;
-  animation: badgeBob 5s ease-in-out infinite;
+  box-shadow: var(--shadow-1);
+  padding: 5px 11px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0;
+  animation: tagIn 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 }
 
-/* Diagonal shimmer sweep — scans across the badge on loop */
-.sinceBadge::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    100deg,
-    transparent 0%,
-    transparent 40%,
-    rgba(255, 165, 100, 0.35) 50%,
-    transparent 60%,
-    transparent 100%
-  );
-  transform: translateX(-120%) skewX(-15deg);
-  animation: badgeShimmer 4s ease-in-out infinite;
-  pointer-events: none;
-  z-index: 0;
+.sinceTag { animation-delay: 0s; }
+.regionTag { animation-delay: 0.15s; }
+
+@keyframes tagIn {
+  0%   { opacity: 0; transform: translateY(-6px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
-.sinceBadge > * {
-  position: relative;
-  z-index: 1;
-}
-
-@keyframes badgeBob {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-4px); }
-}
-
-@keyframes badgeShimmer {
-  0%, 40%, 100% { transform: translateX(-120%) skewX(-15deg); }
-  60%           { transform: translateX(120%)  skewX(-15deg); }
+.sinceLabel {
+  color: var(--text-2);
 }
 
 .sinceYear {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: var(--ls-caps);
-  text-transform: uppercase;
-  color: var(--text-2);
-}
-
-.sinceYearNum {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 14px;
   color: var(--brand);
+  font-size: 13px;
 }
 
-.sinceDivider {
-  width: 1px;
-  height: 14px;
-  background: var(--surface-2);
-}
-
-.sinceYears {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 4px;
-}
-
-.sinceYears strong {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 16px;
-  color: var(--ink);
-}
-
-.sinceYears span {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  color: var(--text-2);
-  text-transform: uppercase;
-  letter-spacing: var(--ls-caps);
-}
-
-/* ============================================================
-   Stats card
-   ============================================================ */
-.stats {
-  position: absolute;
-  bottom: 60px;
-  left: 0;
-  right: 0;
-  background: var(--canvas);
-  border: var(--card-edge);
-  border-radius: var(--r-lg);
-  box-shadow: var(--shadow-3);
-  padding: 14px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 3;
-  animation: bob 5s ease-in-out infinite;
-}
-
-.statHead {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: var(--ls-caps);
-  text-transform: uppercase;
-  color: var(--text-2);
-}
-
-.statHeadDot {
+.regionDot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: var(--brand);
+  animation: dotPulse 1.6s ease-in-out infinite;
 }
 
-.statRow {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
+@keyframes dotPulse {
+  0%, 100% { opacity: 1;   transform: scale(1);    }
+  50%      { opacity: 0.55; transform: scale(1.4); }
 }
 
-.statRow > div {
+/* ============================================================
+   Central 11-year badge — concentric rings + counter
+   ============================================================ */
+.yearBadge {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  margin: 6px auto 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transform: scale(0.6);
+  animation: badgeIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.25s forwards;
+}
+
+@keyframes badgeIn {
+  0%   { opacity: 0; transform: scale(0.6); }
+  60%  { opacity: 1; transform: scale(1.06); }
+  100% { opacity: 1; transform: scale(1);    }
+}
+
+.yearRing,
+.yearRing2 {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--brand);
+  opacity: 0;
+  animation: yearRipple 2.4s cubic-bezier(0.22, 0.61, 0.36, 1) infinite 0.9s;
+}
+
+.yearRing2 { animation-delay: 2.1s; }
+
+@keyframes yearRipple {
+  0%   { transform: scale(0.85); opacity: 0.6; }
+  100% { transform: scale(1.55); opacity: 0;   }
+}
+
+.yearInner {
+  position: relative;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand) 0%, #FF7E3D 100%);
+  color: var(--canvas);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  box-shadow: 0 10px 28px rgba(255, 74, 0, 0.38);
 }
 
-.statValue {
+.yearInner strong {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.yearInner span {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  opacity: 0.92;
+}
+
+/* ============================================================
+   Team — small label + single avatar row (no overlap)
+   ============================================================ */
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.teamLabel {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  font-weight: 700;
+  opacity: 0;
+  animation: tagIn 0.5s ease-out 0.5s forwards;
+}
+
+.avatars {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: var(--canvas);
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 28px;
-  letter-spacing: -0.03em;
-  color: var(--ink);
-  line-height: 1;
+  font-size: 12px;
+  display: grid;
+  place-items: center;
+  border: 3px solid var(--canvas);
+  box-shadow: var(--shadow-2);
+  margin-left: -8px;
+  opacity: 0;
+  animation: avatarIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+             halo 5s ease-in-out infinite;
 }
 
-.statSmall {
-  font-size: 18px;
+.avatar:first-child { margin-left: 0; }
+
+.av1 { animation-delay: 0.55s, 1s; }
+.av2 { animation-delay: 0.65s, 1.5s; }
+.av3 { animation-delay: 0.75s, 2.0s; }
+.av4 { animation-delay: 0.85s, 2.5s; }
+.av5 { animation-delay: 0.95s, 3.0s; }
+.av6 { animation-delay: 1.05s, 3.5s; }
+
+@keyframes avatarIn {
+  0%   { opacity: 0; transform: translateY(8px) scale(0.7); }
+  100% { opacity: 1; transform: translateY(0)   scale(1);   }
+}
+
+@keyframes halo {
+  0%, 88%, 100% { box-shadow: var(--shadow-2); }
+  4%, 10%       { box-shadow: var(--shadow-2), 0 0 0 5px rgba(255, 74, 0, 0.22); }
+}
+
+/* ============================================================
+   Stats — single horizontal row, no card chrome
+   ============================================================ */
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: var(--canvas);
+  border: var(--card-edge);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-2);
+  padding: 12px 18px;
+  margin-top: 4px;
+  opacity: 0;
+  animation: tagIn 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) 1.1s forwards;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.statVal {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.statVal sup {
   color: var(--brand);
+  font-size: 16px;
 }
 
 .statLabel {
   font-family: var(--font-mono);
   font-size: 9px;
-  letter-spacing: var(--ls-caps);
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-2);
-  margin-top: 4px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .statDiv {
   width: 1px;
-  align-self: stretch;
+  height: 26px;
   background: var(--surface-2);
-  margin: 4px 0;
-}
-
-@keyframes bob {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-4px); }
+  flex-shrink: 0;
 }
 
 /* ============================================================
-   Partner pills
+   Partners — pill row at the bottom, properly spaced
    ============================================================ */
-.partner1,
-.partner2,
-.partner3 {
-  position: absolute;
-  background: var(--canvas);
-  border: var(--card-edge);
-  border-radius: var(--r-pill);
-  box-shadow: var(--shadow-2);
-  padding: 6px 12px;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--ink);
+.partners {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.partner {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  background: var(--canvas);
+  border: var(--card-edge);
+  border-radius: var(--r-pill);
+  box-shadow: var(--shadow-1);
+  padding: 5px 11px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
   letter-spacing: 0.02em;
-  animation: bob 4s ease-in-out infinite;
-  z-index: 3;
+  color: var(--ink);
+  white-space: nowrap;
+  opacity: 0;
+  animation: tagIn 0.5s ease-out forwards, partnerBob 5s ease-in-out infinite;
 }
 
-.pDot {
+.partner:nth-child(1) { animation-delay: 1.3s, 2.3s; }
+.partner:nth-child(2) { animation-delay: 1.4s, 2.5s; }
+.partner:nth-child(3) { animation-delay: 1.5s, 2.7s; }
+
+@keyframes partnerBob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-2px); }
+}
+
+.partnerDot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
 }
 
-.partner1 { bottom: 0;     left: 10px;  animation-delay: -1s; }
-.partner2 { bottom: 10px;  left: 50%;   transform: translateX(-50%); animation-delay: -2s; }
-.partner3 { bottom: 0;     right: 10px; animation-delay: -3s; }
+/* ============================================================
+   Mobile
+   ============================================================ */
+@media (max-width: 640px) {
+  .scene {
+    gap: 12px;
+  }
+  .yearBadge {
+    width: 96px;
+    height: 96px;
+  }
+  .yearInner {
+    width: 70px;
+    height: 70px;
+  }
+  .yearInner strong { font-size: 26px; }
+  .avatar { width: 34px; height: 34px; font-size: 11px; }
+  .stats { padding: 10px 12px; gap: 8px; }
+  .statVal { font-size: 20px; }
+  .partner { font-size: 10px; padding: 4px 9px; }
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .avatar,
-  .stats,
-  .partner1, .partner2, .partner3,
-  .sinceBadge, .orbitWrap {
+  .sinceTag, .regionTag, .yearBadge, .yearRing, .yearRing2,
+  .teamLabel, .avatar, .stats, .partner, .regionDot {
     animation: none;
     opacity: 1;
     transform: none;
   }
-  .partner2 { transform: translateX(-50%); }
-  .orbitWrap { transform: translateX(-50%); }
-  .sinceBadge::before, .pulseDot { display: none; }
 }

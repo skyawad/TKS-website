@@ -8,630 +8,1368 @@
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\vite.config.ts",
       "source_location": "L1",
-      "id": "d_tks_dubai_vite_config_ts",
-      "community": 16,
-      "norm_label": "vite.config.ts"
+      "community": 47,
+      "norm_label": "vite.config.ts",
+      "id": "d_tks_dubai_vite_config_ts"
     },
     {
       "label": "App.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\App.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_app_tsx",
-      "community": 17,
-      "norm_label": "app.tsx"
+      "community": 48,
+      "norm_label": "app.tsx",
+      "id": "d_tks_dubai_src_app_tsx"
     },
     {
       "label": "main.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\main.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_main_tsx",
-      "community": 18,
-      "norm_label": "main.tsx"
+      "community": 49,
+      "norm_label": "main.tsx",
+      "id": "d_tks_dubai_src_main_tsx"
     },
     {
       "label": "Button.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\Button.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_button_tsx",
-      "community": 19,
-      "norm_label": "button.tsx"
+      "community": 50,
+      "norm_label": "button.tsx",
+      "id": "d_tks_dubai_src_components_button_tsx"
     },
     {
       "label": "CapabilityCard.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\CapabilityCard.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_capabilitycard_tsx",
-      "community": 20,
-      "norm_label": "capabilitycard.tsx"
+      "community": 51,
+      "norm_label": "capabilitycard.tsx",
+      "id": "d_tks_dubai_src_components_capabilitycard_tsx"
     },
     {
       "label": "Card.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\Card.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_card_tsx",
-      "community": 5,
-      "norm_label": "card.tsx"
+      "community": 10,
+      "norm_label": "card.tsx",
+      "id": "d_tks_dubai_src_components_card_tsx"
     },
     {
       "label": "Card()",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\Card.tsx",
-      "source_location": "L18",
-      "id": "card_card",
-      "community": 5,
-      "norm_label": "card()"
+      "source_location": "L12",
+      "community": 10,
+      "norm_label": "card()",
+      "id": "card_card"
     },
     {
       "label": "CaseStudyTeaser.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\CaseStudyTeaser.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_casestudyteaser_tsx",
-      "community": 6,
-      "norm_label": "casestudyteaser.tsx"
+      "community": 11,
+      "norm_label": "casestudyteaser.tsx",
+      "id": "d_tks_dubai_src_components_casestudyteaser_tsx"
     },
     {
       "label": "CaseStudyTeaser()",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\CaseStudyTeaser.tsx",
       "source_location": "L20",
-      "id": "casestudyteaser_casestudyteaser",
-      "community": 6,
-      "norm_label": "casestudyteaser()"
+      "community": 11,
+      "norm_label": "casestudyteaser()",
+      "id": "casestudyteaser_casestudyteaser"
     },
     {
       "label": "ContactForm.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\ContactForm.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_contactform_tsx",
-      "community": 3,
-      "norm_label": "contactform.tsx"
+      "community": 1,
+      "norm_label": "contactform.tsx",
+      "id": "d_tks_dubai_src_components_contactform_tsx"
     },
     {
-      "label": "validate()",
+      "label": "validateFn()",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\ContactForm.tsx",
-      "source_location": "L68",
-      "id": "contactform_validate",
-      "community": 3,
-      "norm_label": "validate()"
+      "source_location": "L66",
+      "community": 1,
+      "norm_label": "validatefn()",
+      "id": "contactform_validatefn"
     },
     {
       "label": "update()",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\ContactForm.tsx",
       "source_location": "L95",
-      "id": "contactform_update",
-      "community": 3,
-      "norm_label": "update()"
+      "community": 1,
+      "norm_label": "update()",
+      "id": "contactform_update"
     },
     {
       "label": "onSubmit()",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\ContactForm.tsx",
       "source_location": "L100",
-      "id": "contactform_onsubmit",
-      "community": 3,
-      "norm_label": "onsubmit()"
+      "community": 1,
+      "norm_label": "onsubmit()",
+      "id": "contactform_onsubmit"
+    },
+    {
+      "label": "FloatingCard.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\FloatingCard.tsx",
+      "source_location": "L1",
+      "community": 12,
+      "norm_label": "floatingcard.tsx",
+      "id": "d_tks_dubai_src_components_floatingcard_tsx"
+    },
+    {
+      "label": "FloatingCard()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\FloatingCard.tsx",
+      "source_location": "L29",
+      "community": 12,
+      "norm_label": "floatingcard()",
+      "id": "floatingcard_floatingcard"
     },
     {
       "label": "Footer.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\Footer.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_footer_tsx",
-      "community": 7,
-      "norm_label": "footer.tsx"
+      "community": 52,
+      "norm_label": "footer.tsx",
+      "id": "d_tks_dubai_src_components_footer_tsx"
     },
     {
-      "label": "Footer()",
+      "label": "HeroAbout.tsx",
       "file_type": "code",
-      "source_file": "D:\\TKS-Dubai\\src\\components\\Footer.tsx",
-      "source_location": "L6",
-      "id": "footer_footer",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroAbout.tsx",
+      "source_location": "L1",
+      "community": 53,
+      "norm_label": "heroabout.tsx",
+      "id": "d_tks_dubai_src_components_heroabout_tsx"
+    },
+    {
+      "label": "HeroAiStrategy.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroAiStrategy.tsx",
+      "source_location": "L1",
+      "community": 13,
+      "norm_label": "heroaistrategy.tsx",
+      "id": "d_tks_dubai_src_components_heroaistrategy_tsx"
+    },
+    {
+      "label": "HeroAiStrategy()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroAiStrategy.tsx",
+      "source_location": "L8",
+      "community": 13,
+      "norm_label": "heroaistrategy()",
+      "id": "heroaistrategy_heroaistrategy"
+    },
+    {
+      "label": "HeroAnalytics.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroAnalytics.tsx",
+      "source_location": "L1",
+      "community": 14,
+      "norm_label": "heroanalytics.tsx",
+      "id": "d_tks_dubai_src_components_heroanalytics_tsx"
+    },
+    {
+      "label": "HeroAnalytics()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroAnalytics.tsx",
+      "source_location": "L8",
+      "community": 14,
+      "norm_label": "heroanalytics()",
+      "id": "heroanalytics_heroanalytics"
+    },
+    {
+      "label": "HeroAssistIQ.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroAssistIQ.tsx",
+      "source_location": "L1",
+      "community": 15,
+      "norm_label": "heroassistiq.tsx",
+      "id": "d_tks_dubai_src_components_heroassistiq_tsx"
+    },
+    {
+      "label": "HeroAssistIQ()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroAssistIQ.tsx",
+      "source_location": "L7",
+      "community": 15,
+      "norm_label": "heroassistiq()",
+      "id": "heroassistiq_heroassistiq"
+    },
+    {
+      "label": "HeroCallOps.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroCallOps.tsx",
+      "source_location": "L1",
+      "community": 54,
+      "norm_label": "herocallops.tsx",
+      "id": "d_tks_dubai_src_components_herocallops_tsx"
+    },
+    {
+      "label": "HeroContact.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroContact.tsx",
+      "source_location": "L1",
+      "community": 16,
+      "norm_label": "herocontact.tsx",
+      "id": "d_tks_dubai_src_components_herocontact_tsx"
+    },
+    {
+      "label": "HeroContact()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroContact.tsx",
+      "source_location": "L10",
+      "community": 16,
+      "norm_label": "herocontact()",
+      "id": "herocontact_herocontact"
+    },
+    {
+      "label": "HeroCxoNexus.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroCxoNexus.tsx",
+      "source_location": "L1",
+      "community": 17,
+      "norm_label": "herocxonexus.tsx",
+      "id": "d_tks_dubai_src_components_herocxonexus_tsx"
+    },
+    {
+      "label": "HeroCxoNexus()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroCxoNexus.tsx",
+      "source_location": "L7",
+      "community": 17,
+      "norm_label": "herocxonexus()",
+      "id": "herocxonexus_herocxonexus"
+    },
+    {
+      "label": "HeroDataEng.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroDataEng.tsx",
+      "source_location": "L1",
+      "community": 18,
+      "norm_label": "herodataeng.tsx",
+      "id": "d_tks_dubai_src_components_herodataeng_tsx"
+    },
+    {
+      "label": "HeroDataEng()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroDataEng.tsx",
+      "source_location": "L8",
+      "community": 18,
+      "norm_label": "herodataeng()",
+      "id": "herodataeng_herodataeng"
+    },
+    {
+      "label": "HeroDataPulse.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroDataPulse.tsx",
+      "source_location": "L1",
+      "community": 19,
+      "norm_label": "herodatapulse.tsx",
+      "id": "d_tks_dubai_src_components_herodatapulse_tsx"
+    },
+    {
+      "label": "HeroDataPulse()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroDataPulse.tsx",
+      "source_location": "L7",
+      "community": 19,
+      "norm_label": "herodatapulse()",
+      "id": "herodatapulse_herodatapulse"
+    },
+    {
+      "label": "HeroEnterpriseAI.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroEnterpriseAI.tsx",
+      "source_location": "L1",
+      "community": 20,
+      "norm_label": "heroenterpriseai.tsx",
+      "id": "d_tks_dubai_src_components_heroenterpriseai_tsx"
+    },
+    {
+      "label": "HeroEnterpriseAI()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroEnterpriseAI.tsx",
+      "source_location": "L9",
+      "community": 20,
+      "norm_label": "heroenterpriseai()",
+      "id": "heroenterpriseai_heroenterpriseai"
+    },
+    {
+      "label": "HeroFreightIQ.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroFreightIQ.tsx",
+      "source_location": "L1",
+      "community": 21,
+      "norm_label": "herofreightiq.tsx",
+      "id": "d_tks_dubai_src_components_herofreightiq_tsx"
+    },
+    {
+      "label": "HeroFreightIQ()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroFreightIQ.tsx",
+      "source_location": "L8",
+      "community": 21,
+      "norm_label": "herofreightiq()",
+      "id": "herofreightiq_herofreightiq"
+    },
+    {
+      "label": "HeroGeospatial.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroGeospatial.tsx",
+      "source_location": "L1",
+      "community": 22,
+      "norm_label": "herogeospatial.tsx",
+      "id": "d_tks_dubai_src_components_herogeospatial_tsx"
+    },
+    {
+      "label": "HeroGeospatial()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroGeospatial.tsx",
+      "source_location": "L8",
+      "community": 22,
+      "norm_label": "herogeospatial()",
+      "id": "herogeospatial_herogeospatial"
+    },
+    {
+      "label": "HeroHome.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroHome.tsx",
+      "source_location": "L1",
+      "community": 23,
+      "norm_label": "herohome.tsx",
+      "id": "d_tks_dubai_src_components_herohome_tsx"
+    },
+    {
+      "label": "HeroHome()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroHome.tsx",
+      "source_location": "L12",
+      "community": 23,
+      "norm_label": "herohome()",
+      "id": "herohome_herohome"
+    },
+    {
+      "label": "HeroIndustriesMap.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroIndustriesMap.tsx",
+      "source_location": "L1",
+      "community": 24,
+      "norm_label": "heroindustriesmap.tsx",
+      "id": "d_tks_dubai_src_components_heroindustriesmap_tsx"
+    },
+    {
+      "label": "HeroIndustriesMap()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroIndustriesMap.tsx",
+      "source_location": "L9",
+      "community": 24,
+      "norm_label": "heroindustriesmap()",
+      "id": "heroindustriesmap_heroindustriesmap"
+    },
+    {
+      "label": "HeroInsightSM.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroInsightSM.tsx",
+      "source_location": "L1",
+      "community": 25,
+      "norm_label": "heroinsightsm.tsx",
+      "id": "d_tks_dubai_src_components_heroinsightsm_tsx"
+    },
+    {
+      "label": "HeroInsightSM()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroInsightSM.tsx",
+      "source_location": "L7",
+      "community": 25,
+      "norm_label": "heroinsightsm()",
+      "id": "heroinsightsm_heroinsightsm"
+    },
+    {
+      "label": "HeroInsuranceIndustry.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroInsuranceIndustry.tsx",
+      "source_location": "L1",
+      "community": 26,
+      "norm_label": "heroinsuranceindustry.tsx",
+      "id": "d_tks_dubai_src_components_heroinsuranceindustry_tsx"
+    },
+    {
+      "label": "HeroInsuranceIndustry()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroInsuranceIndustry.tsx",
+      "source_location": "L7",
+      "community": 26,
+      "norm_label": "heroinsuranceindustry()",
+      "id": "heroinsuranceindustry_heroinsuranceindustry"
+    },
+    {
+      "label": "HeroManaged.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroManaged.tsx",
+      "source_location": "L1",
+      "community": 27,
+      "norm_label": "heromanaged.tsx",
+      "id": "d_tks_dubai_src_components_heromanaged_tsx"
+    },
+    {
+      "label": "HeroManaged()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroManaged.tsx",
+      "source_location": "L8",
+      "community": 27,
+      "norm_label": "heromanaged()",
+      "id": "heromanaged_heromanaged"
+    },
+    {
+      "label": "HeroManufacturingIndustry.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroManufacturingIndustry.tsx",
+      "source_location": "L1",
+      "community": 55,
+      "norm_label": "heromanufacturingindustry.tsx",
+      "id": "d_tks_dubai_src_components_heromanufacturingindustry_tsx"
+    },
+    {
+      "label": "HeroOilGasIndustry.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroOilGasIndustry.tsx",
+      "source_location": "L1",
       "community": 7,
-      "norm_label": "footer()"
+      "norm_label": "herooilgasindustry.tsx",
+      "id": "d_tks_dubai_src_components_herooilgasindustry_tsx"
+    },
+    {
+      "label": "HeroOilGasIndustry()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroOilGasIndustry.tsx",
+      "source_location": "L7",
+      "community": 7,
+      "norm_label": "herooilgasindustry()",
+      "id": "herooilgasindustry_herooilgasindustry"
+    },
+    {
+      "label": "Gauge()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroOilGasIndustry.tsx",
+      "source_location": "L36",
+      "community": 7,
+      "norm_label": "gauge()",
+      "id": "herooilgasindustry_gauge"
+    },
+    {
+      "label": "HeroParseIQ.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroParseIQ.tsx",
+      "source_location": "L1",
+      "community": 28,
+      "norm_label": "heroparseiq.tsx",
+      "id": "d_tks_dubai_src_components_heroparseiq_tsx"
+    },
+    {
+      "label": "HeroParseIQ()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroParseIQ.tsx",
+      "source_location": "L7",
+      "community": 28,
+      "norm_label": "heroparseiq()",
+      "id": "heroparseiq_heroparseiq"
+    },
+    {
+      "label": "HeroPlatformsHub.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroPlatformsHub.tsx",
+      "source_location": "L1",
+      "community": 29,
+      "norm_label": "heroplatformshub.tsx",
+      "id": "d_tks_dubai_src_components_heroplatformshub_tsx"
+    },
+    {
+      "label": "HeroPlatformsHub()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroPlatformsHub.tsx",
+      "source_location": "L9",
+      "community": 29,
+      "norm_label": "heroplatformshub()",
+      "id": "heroplatformshub_heroplatformshub"
     },
     {
       "label": "HeroSection.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\HeroSection.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_herosection_tsx",
-      "community": 21,
-      "norm_label": "herosection.tsx"
+      "community": 56,
+      "norm_label": "herosection.tsx",
+      "id": "d_tks_dubai_src_components_herosection_tsx"
+    },
+    {
+      "label": "HeroTechITIndustry.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroTechITIndustry.tsx",
+      "source_location": "L1",
+      "community": 57,
+      "norm_label": "herotechitindustry.tsx",
+      "id": "d_tks_dubai_src_components_herotechitindustry_tsx"
+    },
+    {
+      "label": "HeroTicketIQ.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroTicketIQ.tsx",
+      "source_location": "L1",
+      "community": 58,
+      "norm_label": "heroticketiq.tsx",
+      "id": "d_tks_dubai_src_components_heroticketiq_tsx"
+    },
+    {
+      "label": "Icon.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\Icon.tsx",
+      "source_location": "L1",
+      "community": 30,
+      "norm_label": "icon.tsx",
+      "id": "d_tks_dubai_src_components_icon_tsx"
+    },
+    {
+      "label": "Icon()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\Icon.tsx",
+      "source_location": "L34",
+      "community": 30,
+      "norm_label": "icon()",
+      "id": "icon_icon"
+    },
+    {
+      "label": "LangFallbackBanner.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\LangFallbackBanner.tsx",
+      "source_location": "L1",
+      "community": 59,
+      "norm_label": "langfallbackbanner.tsx",
+      "id": "d_tks_dubai_src_components_langfallbackbanner_tsx"
+    },
+    {
+      "label": "LanguageSwitch.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\LanguageSwitch.tsx",
+      "source_location": "L1",
+      "community": 60,
+      "norm_label": "languageswitch.tsx",
+      "id": "d_tks_dubai_src_components_languageswitch_tsx"
     },
     {
       "label": "Layout.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\Layout.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_layout_tsx",
-      "community": 8,
-      "norm_label": "layout.tsx"
+      "community": 31,
+      "norm_label": "layout.tsx",
+      "id": "d_tks_dubai_src_components_layout_tsx"
     },
     {
       "label": "Layout()",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\Layout.tsx",
-      "source_location": "L7",
-      "id": "layout_layout",
-      "community": 8,
-      "norm_label": "layout()"
+      "source_location": "L8",
+      "community": 31,
+      "norm_label": "layout()",
+      "id": "layout_layout"
     },
     {
       "label": "NavBar.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\NavBar.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_navbar_tsx",
-      "community": 2,
-      "norm_label": "navbar.tsx"
+      "community": 0,
+      "norm_label": "navbar.tsx",
+      "id": "d_tks_dubai_src_components_navbar_tsx"
+    },
+    {
+      "label": "cancelMegaClose()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\NavBar.tsx",
+      "source_location": "L21",
+      "community": 0,
+      "norm_label": "cancelmegaclose()",
+      "id": "navbar_cancelmegaclose"
+    },
+    {
+      "label": "openMega()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\NavBar.tsx",
+      "source_location": "L28",
+      "community": 0,
+      "norm_label": "openmega()",
+      "id": "navbar_openmega"
+    },
+    {
+      "label": "scheduleMegaClose()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\NavBar.tsx",
+      "source_location": "L33",
+      "community": 0,
+      "norm_label": "schedulemegaclose()",
+      "id": "navbar_schedulemegaclose"
     },
     {
       "label": "onScroll()",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\NavBar.tsx",
-      "source_location": "L18",
-      "id": "navbar_onscroll",
-      "community": 2,
-      "norm_label": "onscroll()"
+      "source_location": "L44",
+      "community": 0,
+      "norm_label": "onscroll()",
+      "id": "navbar_onscroll"
+    },
+    {
+      "label": "handleMobileLinkClick()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\NavBar.tsx",
+      "source_location": "L55",
+      "community": 0,
+      "norm_label": "handlemobilelinkclick()",
+      "id": "navbar_handlemobilelinkclick"
     },
     {
       "label": "onKey()",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\NavBar.tsx",
-      "source_location": "L33",
-      "id": "navbar_onkey",
-      "community": 2,
-      "norm_label": "onkey()"
+      "source_location": "L64",
+      "community": 0,
+      "norm_label": "onkey()",
+      "id": "navbar_onkey"
     },
     {
-      "label": "onPointerEnter()",
+      "label": "open()",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\NavBar.tsx",
-      "source_location": "L121",
-      "id": "navbar_onpointerenter",
-      "community": 2,
-      "norm_label": "onpointerenter()"
-    },
-    {
-      "label": "onPointerLeave()",
-      "file_type": "code",
-      "source_file": "D:\\TKS-Dubai\\src\\components\\NavBar.tsx",
-      "source_location": "L128",
-      "id": "navbar_onpointerleave",
-      "community": 2,
-      "norm_label": "onpointerleave()"
+      "source_location": "L178",
+      "community": 0,
+      "norm_label": "open()",
+      "id": "navbar_open"
     },
     {
       "label": "PageCTA.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\PageCTA.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_pagecta_tsx",
-      "community": 0,
-      "norm_label": "pagecta.tsx"
+      "community": 61,
+      "norm_label": "pagecta.tsx",
+      "id": "d_tks_dubai_src_components_pagecta_tsx"
     },
     {
-      "label": "defaultSecondary()",
+      "label": "PageTransition.tsx",
       "file_type": "code",
-      "source_file": "D:\\TKS-Dubai\\src\\components\\PageCTA.tsx",
-      "source_location": "L30",
-      "id": "pagecta_defaultsecondary",
-      "community": 0,
-      "norm_label": "defaultsecondary()"
+      "source_file": "D:\\TKS-Dubai\\src\\components\\PageTransition.tsx",
+      "source_location": "L1",
+      "community": 32,
+      "norm_label": "pagetransition.tsx",
+      "id": "d_tks_dubai_src_components_pagetransition_tsx"
     },
     {
-      "label": "CTAAnchor()",
+      "label": "PageTransition()",
       "file_type": "code",
-      "source_file": "D:\\TKS-Dubai\\src\\components\\PageCTA.tsx",
-      "source_location": "L38",
-      "id": "pagecta_ctaanchor",
-      "community": 0,
-      "norm_label": "ctaanchor()"
+      "source_file": "D:\\TKS-Dubai\\src\\components\\PageTransition.tsx",
+      "source_location": "L11",
+      "community": 32,
+      "norm_label": "pagetransition()",
+      "id": "pagetransition_pagetransition"
     },
     {
       "label": "PersonCard.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\PersonCard.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_personcard_tsx",
-      "community": 22,
-      "norm_label": "personcard.tsx"
+      "community": 8,
+      "norm_label": "personcard.tsx",
+      "id": "d_tks_dubai_src_components_personcard_tsx"
+    },
+    {
+      "label": "getInitials()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\PersonCard.tsx",
+      "source_location": "L40",
+      "community": 8,
+      "norm_label": "getinitials()",
+      "id": "personcard_getinitials"
+    },
+    {
+      "label": "PersonCard()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\PersonCard.tsx",
+      "source_location": "L49",
+      "community": 8,
+      "norm_label": "personcard()",
+      "id": "personcard_personcard"
+    },
+    {
+      "label": "Pill.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\Pill.tsx",
+      "source_location": "L1",
+      "community": 33,
+      "norm_label": "pill.tsx",
+      "id": "d_tks_dubai_src_components_pill_tsx"
+    },
+    {
+      "label": "Pill()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\Pill.tsx",
+      "source_location": "L12",
+      "community": 33,
+      "norm_label": "pill()",
+      "id": "pill_pill"
     },
     {
       "label": "PillarCard.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\PillarCard.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_pillarcard_tsx",
-      "community": 9,
-      "norm_label": "pillarcard.tsx"
+      "community": 34,
+      "norm_label": "pillarcard.tsx",
+      "id": "d_tks_dubai_src_components_pillarcard_tsx"
     },
     {
       "label": "PillarCard()",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\PillarCard.tsx",
-      "source_location": "L17",
-      "id": "pillarcard_pillarcard",
-      "community": 9,
-      "norm_label": "pillarcard()"
+      "source_location": "L15",
+      "community": 34,
+      "norm_label": "pillarcard()",
+      "id": "pillarcard_pillarcard"
     },
     {
       "label": "ProcessTimeline.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\ProcessTimeline.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_processtimeline_tsx",
-      "community": 10,
-      "norm_label": "processtimeline.tsx"
+      "community": 35,
+      "norm_label": "processtimeline.tsx",
+      "id": "d_tks_dubai_src_components_processtimeline_tsx"
     },
     {
       "label": "ProcessTimeline()",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\ProcessTimeline.tsx",
       "source_location": "L23",
-      "id": "processtimeline_processtimeline",
-      "community": 10,
-      "norm_label": "processtimeline()"
+      "community": 35,
+      "norm_label": "processtimeline()",
+      "id": "processtimeline_processtimeline"
+    },
+    {
+      "label": "ProductCard.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\ProductCard.tsx",
+      "source_location": "L1",
+      "community": 36,
+      "norm_label": "productcard.tsx",
+      "id": "d_tks_dubai_src_components_productcard_tsx"
+    },
+    {
+      "label": "ProductCard()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\ProductCard.tsx",
+      "source_location": "L23",
+      "community": 36,
+      "norm_label": "productcard()",
+      "id": "productcard_productcard"
+    },
+    {
+      "label": "ProductDetailPage.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\ProductDetailPage.tsx",
+      "source_location": "L1",
+      "community": 37,
+      "norm_label": "productdetailpage.tsx",
+      "id": "d_tks_dubai_src_components_productdetailpage_tsx"
+    },
+    {
+      "label": "renderCtaLink()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\ProductDetailPage.tsx",
+      "source_location": "L23",
+      "community": 37,
+      "norm_label": "renderctalink()",
+      "id": "productdetailpage_renderctalink"
     },
     {
       "label": "Reveal.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\Reveal.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_reveal_tsx",
-      "community": 11,
-      "norm_label": "reveal.tsx"
+      "community": 38,
+      "norm_label": "reveal.tsx",
+      "id": "d_tks_dubai_src_components_reveal_tsx"
     },
     {
       "label": "Reveal()",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\Reveal.tsx",
       "source_location": "L28",
-      "id": "reveal_reveal",
-      "community": 11,
-      "norm_label": "reveal()"
+      "community": 38,
+      "norm_label": "reveal()",
+      "id": "reveal_reveal"
+    },
+    {
+      "label": "ScrollToTop.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\ScrollToTop.tsx",
+      "source_location": "L1",
+      "community": 39,
+      "norm_label": "scrolltotop.tsx",
+      "id": "d_tks_dubai_src_components_scrolltotop_tsx"
+    },
+    {
+      "label": "ScrollToTop()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\ScrollToTop.tsx",
+      "source_location": "L14",
+      "community": 39,
+      "norm_label": "scrolltotop()",
+      "id": "scrolltotop_scrolltotop"
     },
     {
       "label": "SectionHeader.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\SectionHeader.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_sectionheader_tsx",
-      "community": 12,
-      "norm_label": "sectionheader.tsx"
+      "community": 40,
+      "norm_label": "sectionheader.tsx",
+      "id": "d_tks_dubai_src_components_sectionheader_tsx"
     },
     {
       "label": "SectionHeader()",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\SectionHeader.tsx",
-      "source_location": "L22",
-      "id": "sectionheader_sectionheader",
-      "community": 12,
-      "norm_label": "sectionheader()"
+      "source_location": "L15",
+      "community": 40,
+      "norm_label": "sectionheader()",
+      "id": "sectionheader_sectionheader"
     },
     {
       "label": "ServiceDetailPage.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\ServiceDetailPage.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_servicedetailpage_tsx",
-      "community": 23,
-      "norm_label": "servicedetailpage.tsx"
+      "community": 62,
+      "norm_label": "servicedetailpage.tsx",
+      "id": "d_tks_dubai_src_components_servicedetailpage_tsx"
     },
     {
-      "label": "SpotlightCard.tsx",
+      "label": "SiteLoader.tsx",
       "file_type": "code",
-      "source_file": "D:\\TKS-Dubai\\src\\components\\SpotlightCard.tsx",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\SiteLoader.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_spotlightcard_tsx",
-      "community": 13,
-      "norm_label": "spotlightcard.tsx"
+      "community": 41,
+      "norm_label": "siteloader.tsx",
+      "id": "d_tks_dubai_src_components_siteloader_tsx"
     },
     {
-      "label": "SpotlightCard()",
+      "label": "SiteLoader()",
       "file_type": "code",
-      "source_file": "D:\\TKS-Dubai\\src\\components\\SpotlightCard.tsx",
-      "source_location": "L30",
-      "id": "spotlightcard_spotlightcard",
-      "community": 13,
-      "norm_label": "spotlightcard()"
-    },
-    {
-      "label": "ThemeToggle.tsx",
-      "file_type": "code",
-      "source_file": "D:\\TKS-Dubai\\src\\components\\ThemeToggle.tsx",
-      "source_location": "L1",
-      "id": "d_tks_dubai_src_components_themetoggle_tsx",
-      "community": 1,
-      "norm_label": "themetoggle.tsx"
-    },
-    {
-      "label": "ThemeToggle()",
-      "file_type": "code",
-      "source_file": "D:\\TKS-Dubai\\src\\components\\ThemeToggle.tsx",
-      "source_location": "L5",
-      "id": "themetoggle_themetoggle",
-      "community": 1,
-      "norm_label": "themetoggle()"
+      "source_file": "D:\\TKS-Dubai\\src\\components\\SiteLoader.tsx",
+      "source_location": "L8",
+      "community": 41,
+      "norm_label": "siteloader()",
+      "id": "siteloader_siteloader"
     },
     {
       "label": "UseCaseCard.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\UseCaseCard.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_usecasecard_tsx",
-      "community": 24,
-      "norm_label": "usecasecard.tsx"
+      "community": 63,
+      "norm_label": "usecasecard.tsx",
+      "id": "d_tks_dubai_src_components_usecasecard_tsx"
     },
     {
       "label": "ValueTile.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\ValueTile.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_valuetile_tsx",
-      "community": 14,
-      "norm_label": "valuetile.tsx"
+      "community": 42,
+      "norm_label": "valuetile.tsx",
+      "id": "d_tks_dubai_src_components_valuetile_tsx"
     },
     {
       "label": "ValueTile()",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\ValueTile.tsx",
-      "source_location": "L20",
-      "id": "valuetile_valuetile",
-      "community": 14,
-      "norm_label": "valuetile()"
+      "source_location": "L38",
+      "community": 42,
+      "norm_label": "valuetile()",
+      "id": "valuetile_valuetile"
     },
     {
       "label": "WhatsAppFAB.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\WhatsAppFAB.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_components_whatsappfab_tsx",
-      "community": 0,
-      "norm_label": "whatsappfab.tsx"
+      "community": 2,
+      "norm_label": "whatsappfab.tsx",
+      "id": "d_tks_dubai_src_components_whatsappfab_tsx"
     },
     {
       "label": "WhatsAppFAB()",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\components\\WhatsAppFAB.tsx",
       "source_location": "L4",
-      "id": "whatsappfab_whatsappfab",
-      "community": 0,
-      "norm_label": "whatsappfab()"
+      "community": 2,
+      "norm_label": "whatsappfab()",
+      "id": "whatsappfab_whatsappfab"
     },
     {
       "label": "contact.ts",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\data\\contact.ts",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_data_contact_ts",
-      "community": 25,
-      "norm_label": "contact.ts"
+      "community": 64,
+      "norm_label": "contact.ts",
+      "id": "d_tks_dubai_src_data_contact_ts"
+    },
+    {
+      "label": "enterprise-ai.ts",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\data\\enterprise-ai.ts",
+      "source_location": "L1",
+      "community": 4,
+      "norm_label": "enterprise-ai.ts",
+      "id": "d_tks_dubai_src_data_enterprise_ai_ts"
+    },
+    {
+      "label": "getEnterpriseAIBySlug()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\data\\enterprise-ai.ts",
+      "source_location": "L324",
+      "community": 4,
+      "norm_label": "getenterpriseaibyslug()",
+      "id": "enterprise_ai_getenterpriseaibyslug"
+    },
+    {
+      "label": "industries.ts",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\data\\industries.ts",
+      "source_location": "L1",
+      "community": 5,
+      "norm_label": "industries.ts",
+      "id": "d_tks_dubai_src_data_industries_ts"
+    },
+    {
+      "label": "getIndustryBySlug()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\data\\industries.ts",
+      "source_location": "L309",
+      "community": 5,
+      "norm_label": "getindustrybyslug()",
+      "id": "industries_getindustrybyslug"
     },
     {
       "label": "nav.ts",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\data\\nav.ts",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_data_nav_ts",
-      "community": 26,
-      "norm_label": "nav.ts"
+      "community": 65,
+      "norm_label": "nav.ts",
+      "id": "d_tks_dubai_src_data_nav_ts"
+    },
+    {
+      "label": "platforms.ts",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\data\\platforms.ts",
+      "source_location": "L1",
+      "community": 3,
+      "norm_label": "platforms.ts",
+      "id": "d_tks_dubai_src_data_platforms_ts"
+    },
+    {
+      "label": "getPlatformBySlug()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\data\\platforms.ts",
+      "source_location": "L310",
+      "community": 3,
+      "norm_label": "getplatformbyslug()",
+      "id": "platforms_getplatformbyslug"
+    },
+    {
+      "label": "product-detail.ts",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\data\\product-detail.ts",
+      "source_location": "L1",
+      "community": 66,
+      "norm_label": "product-detail.ts",
+      "id": "d_tks_dubai_src_data_product_detail_ts"
     },
     {
       "label": "service-detail.ts",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\data\\service-detail.ts",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_data_service_detail_ts",
-      "community": 27,
-      "norm_label": "service-detail.ts"
+      "community": 67,
+      "norm_label": "service-detail.ts",
+      "id": "d_tks_dubai_src_data_service_detail_ts"
     },
     {
       "label": "business-analytics.ts",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\data\\services\\business-analytics.ts",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_data_services_business_analytics_ts",
-      "community": 28,
-      "norm_label": "business-analytics.ts"
+      "community": 68,
+      "norm_label": "business-analytics.ts",
+      "id": "d_tks_dubai_src_data_services_business_analytics_ts"
     },
     {
       "label": "data-ai-strategy.ts",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\data\\services\\data-ai-strategy.ts",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_data_services_data_ai_strategy_ts",
-      "community": 29,
-      "norm_label": "data-ai-strategy.ts"
+      "community": 69,
+      "norm_label": "data-ai-strategy.ts",
+      "id": "d_tks_dubai_src_data_services_data_ai_strategy_ts"
     },
     {
       "label": "data-engineering.ts",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\data\\services\\data-engineering.ts",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_data_services_data_engineering_ts",
-      "community": 30,
-      "norm_label": "data-engineering.ts"
+      "community": 70,
+      "norm_label": "data-engineering.ts",
+      "id": "d_tks_dubai_src_data_services_data_engineering_ts"
     },
     {
       "label": "geospatial-analytics.ts",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\data\\services\\geospatial-analytics.ts",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_data_services_geospatial_analytics_ts",
-      "community": 31,
-      "norm_label": "geospatial-analytics.ts"
+      "community": 71,
+      "norm_label": "geospatial-analytics.ts",
+      "id": "d_tks_dubai_src_data_services_geospatial_analytics_ts"
     },
     {
       "label": "index.ts",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\data\\services\\index.ts",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_data_services_index_ts",
-      "community": 4,
-      "norm_label": "index.ts"
+      "community": 6,
+      "norm_label": "index.ts",
+      "id": "d_tks_dubai_src_data_services_index_ts"
     },
     {
       "label": "getServiceBySlug()",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\data\\services\\index.ts",
       "source_location": "L20",
-      "id": "index_getservicebyslug",
-      "community": 4,
-      "norm_label": "getservicebyslug()"
+      "community": 6,
+      "norm_label": "getservicebyslug()",
+      "id": "index_getservicebyslug"
     },
     {
       "label": "managed-services.ts",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\data\\services\\managed-services.ts",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_data_services_managed_services_ts",
-      "community": 32,
-      "norm_label": "managed-services.ts"
+      "community": 72,
+      "norm_label": "managed-services.ts",
+      "id": "d_tks_dubai_src_data_services_managed_services_ts"
     },
     {
-      "label": "theme.ts",
+      "label": "LanguageContext.tsx",
       "file_type": "code",
-      "source_file": "D:\\TKS-Dubai\\src\\lib\\theme.ts",
+      "source_file": "D:\\TKS-Dubai\\src\\i18n\\LanguageContext.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_lib_theme_ts",
-      "community": 1,
-      "norm_label": "theme.ts"
+      "community": 43,
+      "norm_label": "languagecontext.tsx",
+      "id": "d_tks_dubai_src_i18n_languagecontext_tsx"
     },
     {
-      "label": "getInitialTheme()",
+      "label": "LanguageProvider()",
       "file_type": "code",
-      "source_file": "D:\\TKS-Dubai\\src\\lib\\theme.ts",
-      "source_location": "L5",
-      "id": "theme_getinitialtheme",
-      "community": 1,
-      "norm_label": "getinitialtheme()"
+      "source_file": "D:\\TKS-Dubai\\src\\i18n\\LanguageContext.tsx",
+      "source_location": "L26",
+      "community": 43,
+      "norm_label": "languageprovider()",
+      "id": "languagecontext_languageprovider"
     },
     {
-      "label": "applyTheme()",
+      "label": "LocalizedLink.tsx",
       "file_type": "code",
-      "source_file": "D:\\TKS-Dubai\\src\\lib\\theme.ts",
-      "source_location": "L12",
-      "id": "theme_applytheme",
-      "community": 1,
-      "norm_label": "applytheme()"
+      "source_file": "D:\\TKS-Dubai\\src\\i18n\\LocalizedLink.tsx",
+      "source_location": "L1",
+      "community": 44,
+      "norm_label": "localizedlink.tsx",
+      "id": "d_tks_dubai_src_i18n_localizedlink_tsx"
     },
     {
-      "label": "toggleTheme()",
+      "label": "ExtLink()",
       "file_type": "code",
-      "source_file": "D:\\TKS-Dubai\\src\\lib\\theme.ts",
-      "source_location": "L21",
-      "id": "theme_toggletheme",
-      "community": 1,
-      "norm_label": "toggletheme()"
+      "source_file": "D:\\TKS-Dubai\\src\\i18n\\LocalizedLink.tsx",
+      "source_location": "L27",
+      "community": 44,
+      "norm_label": "extlink()",
+      "id": "localizedlink_extlink"
+    },
+    {
+      "label": "strings.ts",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\i18n\\strings.ts",
+      "source_location": "L1",
+      "community": 45,
+      "norm_label": "strings.ts",
+      "id": "d_tks_dubai_src_i18n_strings_ts"
+    },
+    {
+      "label": "tr()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\i18n\\strings.ts",
+      "source_location": "L1023",
+      "community": 45,
+      "norm_label": "tr()",
+      "id": "strings_tr"
+    },
+    {
+      "label": "useT.ts",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\i18n\\useT.ts",
+      "source_location": "L1",
+      "community": 46,
+      "norm_label": "uset.ts",
+      "id": "d_tks_dubai_src_i18n_uset_ts"
+    },
+    {
+      "label": "useT()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\i18n\\useT.ts",
+      "source_location": "L8",
+      "community": 46,
+      "norm_label": "uset()",
+      "id": "uset_uset"
     },
     {
       "label": "whatsapp.ts",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\lib\\whatsapp.ts",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_lib_whatsapp_ts",
-      "community": 0,
-      "norm_label": "whatsapp.ts"
+      "community": 2,
+      "norm_label": "whatsapp.ts",
+      "id": "d_tks_dubai_src_lib_whatsapp_ts"
     },
     {
       "label": "buildWhatsAppLink()",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\lib\\whatsapp.ts",
       "source_location": "L12",
-      "id": "whatsapp_buildwhatsapplink",
-      "community": 0,
-      "norm_label": "buildwhatsapplink()"
+      "community": 2,
+      "norm_label": "buildwhatsapplink()",
+      "id": "whatsapp_buildwhatsapplink"
+    },
+    {
+      "label": "AboutCareers.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\AboutCareers.tsx",
+      "source_location": "L1",
+      "community": 73,
+      "norm_label": "aboutcareers.tsx",
+      "id": "d_tks_dubai_src_pages_aboutcareers_tsx"
     },
     {
       "label": "AboutCompany.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\pages\\AboutCompany.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_pages_aboutcompany_tsx",
-      "community": 33,
-      "norm_label": "aboutcompany.tsx"
+      "community": 74,
+      "norm_label": "aboutcompany.tsx",
+      "id": "d_tks_dubai_src_pages_aboutcompany_tsx"
+    },
+    {
+      "label": "AboutCustomerStories.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\AboutCustomerStories.tsx",
+      "source_location": "L1",
+      "community": 75,
+      "norm_label": "aboutcustomerstories.tsx",
+      "id": "d_tks_dubai_src_pages_aboutcustomerstories_tsx"
+    },
+    {
+      "label": "AboutFAQs.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\AboutFAQs.tsx",
+      "source_location": "L1",
+      "community": 9,
+      "norm_label": "aboutfaqs.tsx",
+      "id": "d_tks_dubai_src_pages_aboutfaqs_tsx"
+    },
+    {
+      "label": "FaqItem()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\AboutFAQs.tsx",
+      "source_location": "L47",
+      "community": 9,
+      "norm_label": "faqitem()",
+      "id": "aboutfaqs_faqitem"
+    },
+    {
+      "label": "AboutFAQs()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\AboutFAQs.tsx",
+      "source_location": "L56",
+      "community": 9,
+      "norm_label": "aboutfaqs()",
+      "id": "aboutfaqs_aboutfaqs"
+    },
+    {
+      "label": "AboutPartnerships.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\AboutPartnerships.tsx",
+      "source_location": "L1",
+      "community": 76,
+      "norm_label": "aboutpartnerships.tsx",
+      "id": "d_tks_dubai_src_pages_aboutpartnerships_tsx"
     },
     {
       "label": "Contact.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\pages\\Contact.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_pages_contact_tsx",
-      "community": 34,
-      "norm_label": "contact.tsx"
+      "community": 77,
+      "norm_label": "contact.tsx",
+      "id": "d_tks_dubai_src_pages_contact_tsx"
     },
     {
-      "label": "DesignProof.tsx",
+      "label": "EnterpriseAIDetail.tsx",
       "file_type": "code",
-      "source_file": "D:\\TKS-Dubai\\src\\pages\\DesignProof.tsx",
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\EnterpriseAIDetail.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_pages_designproof_tsx",
-      "community": 35,
-      "norm_label": "designproof.tsx"
+      "community": 4,
+      "norm_label": "enterpriseaidetail.tsx",
+      "id": "d_tks_dubai_src_pages_enterpriseaidetail_tsx"
+    },
+    {
+      "label": "EnterpriseAIDetailRoute()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\EnterpriseAIDetail.tsx",
+      "source_location": "L18",
+      "community": 4,
+      "norm_label": "enterpriseaidetailroute()",
+      "id": "enterpriseaidetail_enterpriseaidetailroute"
+    },
+    {
+      "label": "EnterpriseAIIndex.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\EnterpriseAIIndex.tsx",
+      "source_location": "L1",
+      "community": 78,
+      "norm_label": "enterpriseaiindex.tsx",
+      "id": "d_tks_dubai_src_pages_enterpriseaiindex_tsx"
     },
     {
       "label": "Home.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\pages\\Home.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_pages_home_tsx",
-      "community": 36,
-      "norm_label": "home.tsx"
+      "community": 79,
+      "norm_label": "home.tsx",
+      "id": "d_tks_dubai_src_pages_home_tsx"
+    },
+    {
+      "label": "IndustriesIndex.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\IndustriesIndex.tsx",
+      "source_location": "L1",
+      "community": 80,
+      "norm_label": "industriesindex.tsx",
+      "id": "d_tks_dubai_src_pages_industriesindex_tsx"
+    },
+    {
+      "label": "IndustryDetail.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\IndustryDetail.tsx",
+      "source_location": "L1",
+      "community": 5,
+      "norm_label": "industrydetail.tsx",
+      "id": "d_tks_dubai_src_pages_industrydetail_tsx"
+    },
+    {
+      "label": "IndustryDetailRoute()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\IndustryDetail.tsx",
+      "source_location": "L18",
+      "community": 5,
+      "norm_label": "industrydetailroute()",
+      "id": "industrydetail_industrydetailroute"
     },
     {
       "label": "NotFound.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\pages\\NotFound.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_pages_notfound_tsx",
-      "community": 15,
-      "norm_label": "notfound.tsx"
+      "community": 81,
+      "norm_label": "notfound.tsx",
+      "id": "d_tks_dubai_src_pages_notfound_tsx"
     },
     {
-      "label": "NotFound()",
+      "label": "PlatformDetail.tsx",
       "file_type": "code",
-      "source_file": "D:\\TKS-Dubai\\src\\pages\\NotFound.tsx",
-      "source_location": "L4",
-      "id": "notfound_notfound",
-      "community": 15,
-      "norm_label": "notfound()"
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\PlatformDetail.tsx",
+      "source_location": "L1",
+      "community": 3,
+      "norm_label": "platformdetail.tsx",
+      "id": "d_tks_dubai_src_pages_platformdetail_tsx"
+    },
+    {
+      "label": "PlatformDetailRoute()",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\PlatformDetail.tsx",
+      "source_location": "L18",
+      "community": 3,
+      "norm_label": "platformdetailroute()",
+      "id": "platformdetail_platformdetailroute"
+    },
+    {
+      "label": "PlatformsIndex.tsx",
+      "file_type": "code",
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\PlatformsIndex.tsx",
+      "source_location": "L1",
+      "community": 82,
+      "norm_label": "platformsindex.tsx",
+      "id": "d_tks_dubai_src_pages_platformsindex_tsx"
     },
     {
       "label": "ServiceDetail.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\pages\\ServiceDetail.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_pages_servicedetail_tsx",
-      "community": 4,
-      "norm_label": "servicedetail.tsx"
+      "community": 6,
+      "norm_label": "servicedetail.tsx",
+      "id": "d_tks_dubai_src_pages_servicedetail_tsx"
     },
     {
       "label": "ServiceDetailRoute()",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\pages\\ServiceDetail.tsx",
       "source_location": "L11",
-      "id": "servicedetail_servicedetailroute",
-      "community": 4,
-      "norm_label": "servicedetailroute()"
+      "community": 6,
+      "norm_label": "servicedetailroute()",
+      "id": "servicedetail_servicedetailroute"
     },
     {
       "label": "ServicesIndex.tsx",
       "file_type": "code",
       "source_file": "D:\\TKS-Dubai\\src\\pages\\ServicesIndex.tsx",
       "source_location": "L1",
-      "id": "d_tks_dubai_src_pages_servicesindex_tsx",
-      "community": 37,
-      "norm_label": "servicesindex.tsx"
+      "community": 83,
+      "norm_label": "servicesindex.tsx",
+      "id": "d_tks_dubai_src_pages_servicesindex_tsx"
     }
   ],
   "links": [
@@ -639,13 +1377,13 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "D:\\TKS-Dubai\\src\\components\\Card.tsx",
-      "source_location": "L18",
+      "source_location": "L12",
       "weight": 1.0,
       "_src": "d_tks_dubai_src_components_card_tsx",
       "_tgt": "card_card",
+      "confidence_score": 1.0,
       "source": "d_tks_dubai_src_components_card_tsx",
-      "target": "card_card",
-      "confidence_score": 1.0
+      "target": "card_card"
     },
     {
       "relation": "contains",
@@ -655,21 +1393,21 @@
       "weight": 1.0,
       "_src": "d_tks_dubai_src_components_casestudyteaser_tsx",
       "_tgt": "casestudyteaser_casestudyteaser",
+      "confidence_score": 1.0,
       "source": "d_tks_dubai_src_components_casestudyteaser_tsx",
-      "target": "casestudyteaser_casestudyteaser",
-      "confidence_score": 1.0
+      "target": "casestudyteaser_casestudyteaser"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "D:\\TKS-Dubai\\src\\components\\ContactForm.tsx",
-      "source_location": "L68",
+      "source_location": "L66",
       "weight": 1.0,
       "_src": "d_tks_dubai_src_components_contactform_tsx",
-      "_tgt": "contactform_validate",
+      "_tgt": "contactform_validatefn",
+      "confidence_score": 1.0,
       "source": "d_tks_dubai_src_components_contactform_tsx",
-      "target": "contactform_validate",
-      "confidence_score": 1.0
+      "target": "contactform_validatefn"
     },
     {
       "relation": "contains",
@@ -679,9 +1417,9 @@
       "weight": 1.0,
       "_src": "d_tks_dubai_src_components_contactform_tsx",
       "_tgt": "contactform_update",
+      "confidence_score": 1.0,
       "source": "d_tks_dubai_src_components_contactform_tsx",
-      "target": "contactform_update",
-      "confidence_score": 1.0
+      "target": "contactform_update"
     },
     {
       "relation": "contains",
@@ -691,141 +1429,465 @@
       "weight": 1.0,
       "_src": "d_tks_dubai_src_components_contactform_tsx",
       "_tgt": "contactform_onsubmit",
+      "confidence_score": 1.0,
       "source": "d_tks_dubai_src_components_contactform_tsx",
-      "target": "contactform_onsubmit",
-      "confidence_score": 1.0
+      "target": "contactform_onsubmit"
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "D:\\TKS-Dubai\\src\\components\\ContactForm.tsx",
-      "source_location": "L107",
+      "source_location": "L106",
       "weight": 1.0,
-      "_src": "contactform_onsubmit",
-      "_tgt": "contactform_validate",
-      "source": "contactform_validate",
-      "target": "contactform_onsubmit",
-      "confidence_score": 1.0
+      "_src": "contactform_validatefn",
+      "_tgt": "contactform_onsubmit",
+      "confidence_score": 1.0,
+      "source": "contactform_validatefn",
+      "target": "contactform_onsubmit"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "D:\\TKS-Dubai\\src\\components\\Footer.tsx",
-      "source_location": "L6",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\FloatingCard.tsx",
+      "source_location": "L29",
       "weight": 1.0,
-      "_src": "d_tks_dubai_src_components_footer_tsx",
-      "_tgt": "footer_footer",
-      "source": "d_tks_dubai_src_components_footer_tsx",
-      "target": "footer_footer",
-      "confidence_score": 1.0
+      "_src": "d_tks_dubai_src_components_floatingcard_tsx",
+      "_tgt": "floatingcard_floatingcard",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_floatingcard_tsx",
+      "target": "floatingcard_floatingcard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroAiStrategy.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_heroaistrategy_tsx",
+      "_tgt": "heroaistrategy_heroaistrategy",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_heroaistrategy_tsx",
+      "target": "heroaistrategy_heroaistrategy"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroAnalytics.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_heroanalytics_tsx",
+      "_tgt": "heroanalytics_heroanalytics",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_heroanalytics_tsx",
+      "target": "heroanalytics_heroanalytics"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroAssistIQ.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_heroassistiq_tsx",
+      "_tgt": "heroassistiq_heroassistiq",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_heroassistiq_tsx",
+      "target": "heroassistiq_heroassistiq"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroContact.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_herocontact_tsx",
+      "_tgt": "herocontact_herocontact",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_herocontact_tsx",
+      "target": "herocontact_herocontact"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroCxoNexus.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_herocxonexus_tsx",
+      "_tgt": "herocxonexus_herocxonexus",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_herocxonexus_tsx",
+      "target": "herocxonexus_herocxonexus"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroDataEng.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_herodataeng_tsx",
+      "_tgt": "herodataeng_herodataeng",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_herodataeng_tsx",
+      "target": "herodataeng_herodataeng"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroDataPulse.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_herodatapulse_tsx",
+      "_tgt": "herodatapulse_herodatapulse",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_herodatapulse_tsx",
+      "target": "herodatapulse_herodatapulse"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroEnterpriseAI.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_heroenterpriseai_tsx",
+      "_tgt": "heroenterpriseai_heroenterpriseai",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_heroenterpriseai_tsx",
+      "target": "heroenterpriseai_heroenterpriseai"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroFreightIQ.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_herofreightiq_tsx",
+      "_tgt": "herofreightiq_herofreightiq",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_herofreightiq_tsx",
+      "target": "herofreightiq_herofreightiq"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroGeospatial.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_herogeospatial_tsx",
+      "_tgt": "herogeospatial_herogeospatial",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_herogeospatial_tsx",
+      "target": "herogeospatial_herogeospatial"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroHome.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_herohome_tsx",
+      "_tgt": "herohome_herohome",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_herohome_tsx",
+      "target": "herohome_herohome"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroIndustriesMap.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_heroindustriesmap_tsx",
+      "_tgt": "heroindustriesmap_heroindustriesmap",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_heroindustriesmap_tsx",
+      "target": "heroindustriesmap_heroindustriesmap"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroInsightSM.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_heroinsightsm_tsx",
+      "_tgt": "heroinsightsm_heroinsightsm",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_heroinsightsm_tsx",
+      "target": "heroinsightsm_heroinsightsm"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroInsuranceIndustry.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_heroinsuranceindustry_tsx",
+      "_tgt": "heroinsuranceindustry_heroinsuranceindustry",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_heroinsuranceindustry_tsx",
+      "target": "heroinsuranceindustry_heroinsuranceindustry"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroManaged.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_heromanaged_tsx",
+      "_tgt": "heromanaged_heromanaged",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_heromanaged_tsx",
+      "target": "heromanaged_heromanaged"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroOilGasIndustry.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_herooilgasindustry_tsx",
+      "_tgt": "herooilgasindustry_herooilgasindustry",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_herooilgasindustry_tsx",
+      "target": "herooilgasindustry_herooilgasindustry"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroOilGasIndustry.tsx",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_herooilgasindustry_tsx",
+      "_tgt": "herooilgasindustry_gauge",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_herooilgasindustry_tsx",
+      "target": "herooilgasindustry_gauge"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroParseIQ.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_heroparseiq_tsx",
+      "_tgt": "heroparseiq_heroparseiq",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_heroparseiq_tsx",
+      "target": "heroparseiq_heroparseiq"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\HeroPlatformsHub.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_heroplatformshub_tsx",
+      "_tgt": "heroplatformshub_heroplatformshub",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_heroplatformshub_tsx",
+      "target": "heroplatformshub_heroplatformshub"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\Icon.tsx",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_icon_tsx",
+      "_tgt": "icon_icon",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_icon_tsx",
+      "target": "icon_icon"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "D:\\TKS-Dubai\\src\\components\\Layout.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_src": "d_tks_dubai_src_components_layout_tsx",
       "_tgt": "layout_layout",
+      "confidence_score": 1.0,
       "source": "d_tks_dubai_src_components_layout_tsx",
-      "target": "layout_layout",
-      "confidence_score": 1.0
+      "target": "layout_layout"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "D:\\TKS-Dubai\\src\\components\\NavBar.tsx",
-      "source_location": "L18",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_navbar_tsx",
+      "_tgt": "navbar_cancelmegaclose",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_navbar_tsx",
+      "target": "navbar_cancelmegaclose"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\NavBar.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_navbar_tsx",
+      "_tgt": "navbar_openmega",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_navbar_tsx",
+      "target": "navbar_openmega"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\NavBar.tsx",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_navbar_tsx",
+      "_tgt": "navbar_schedulemegaclose",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_navbar_tsx",
+      "target": "navbar_schedulemegaclose"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\NavBar.tsx",
+      "source_location": "L44",
       "weight": 1.0,
       "_src": "d_tks_dubai_src_components_navbar_tsx",
       "_tgt": "navbar_onscroll",
+      "confidence_score": 1.0,
       "source": "d_tks_dubai_src_components_navbar_tsx",
-      "target": "navbar_onscroll",
-      "confidence_score": 1.0
+      "target": "navbar_onscroll"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "D:\\TKS-Dubai\\src\\components\\NavBar.tsx",
-      "source_location": "L33",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_navbar_tsx",
+      "_tgt": "navbar_handlemobilelinkclick",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_navbar_tsx",
+      "target": "navbar_handlemobilelinkclick"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\NavBar.tsx",
+      "source_location": "L64",
       "weight": 1.0,
       "_src": "d_tks_dubai_src_components_navbar_tsx",
       "_tgt": "navbar_onkey",
+      "confidence_score": 1.0,
       "source": "d_tks_dubai_src_components_navbar_tsx",
-      "target": "navbar_onkey",
-      "confidence_score": 1.0
+      "target": "navbar_onkey"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "D:\\TKS-Dubai\\src\\components\\NavBar.tsx",
-      "source_location": "L121",
+      "source_location": "L178",
       "weight": 1.0,
       "_src": "d_tks_dubai_src_components_navbar_tsx",
-      "_tgt": "navbar_onpointerenter",
+      "_tgt": "navbar_open",
+      "confidence_score": 1.0,
       "source": "d_tks_dubai_src_components_navbar_tsx",
-      "target": "navbar_onpointerenter",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "D:\\TKS-Dubai\\src\\components\\NavBar.tsx",
-      "source_location": "L128",
-      "weight": 1.0,
-      "_src": "d_tks_dubai_src_components_navbar_tsx",
-      "_tgt": "navbar_onpointerleave",
-      "source": "d_tks_dubai_src_components_navbar_tsx",
-      "target": "navbar_onpointerleave",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "D:\\TKS-Dubai\\src\\components\\PageCTA.tsx",
-      "source_location": "L30",
-      "weight": 1.0,
-      "_src": "d_tks_dubai_src_components_pagecta_tsx",
-      "_tgt": "pagecta_defaultsecondary",
-      "source": "d_tks_dubai_src_components_pagecta_tsx",
-      "target": "pagecta_defaultsecondary",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "D:\\TKS-Dubai\\src\\components\\PageCTA.tsx",
-      "source_location": "L38",
-      "weight": 1.0,
-      "_src": "d_tks_dubai_src_components_pagecta_tsx",
-      "_tgt": "pagecta_ctaanchor",
-      "source": "d_tks_dubai_src_components_pagecta_tsx",
-      "target": "pagecta_ctaanchor",
-      "confidence_score": 1.0
+      "target": "navbar_open"
     },
     {
       "relation": "calls",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "D:\\TKS-Dubai\\src\\components\\PageCTA.tsx",
-      "source_location": "L33",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\NavBar.tsx",
+      "source_location": "L29",
       "weight": 1.0,
-      "_src": "pagecta_defaultsecondary",
-      "_tgt": "whatsapp_buildwhatsapplink",
-      "source": "pagecta_defaultsecondary",
-      "target": "whatsapp_buildwhatsapplink"
+      "_src": "navbar_cancelmegaclose",
+      "_tgt": "navbar_openmega",
+      "confidence_score": 1.0,
+      "source": "navbar_cancelmegaclose",
+      "target": "navbar_openmega"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\NavBar.tsx",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_src": "navbar_cancelmegaclose",
+      "_tgt": "navbar_schedulemegaclose",
+      "confidence_score": 1.0,
+      "source": "navbar_cancelmegaclose",
+      "target": "navbar_schedulemegaclose"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\PageTransition.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_pagetransition_tsx",
+      "_tgt": "pagetransition_pagetransition",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_pagetransition_tsx",
+      "target": "pagetransition_pagetransition"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\PersonCard.tsx",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_personcard_tsx",
+      "_tgt": "personcard_getinitials",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_personcard_tsx",
+      "target": "personcard_getinitials"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\PersonCard.tsx",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_personcard_tsx",
+      "_tgt": "personcard_personcard",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_personcard_tsx",
+      "target": "personcard_personcard"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\PersonCard.tsx",
+      "source_location": "L59",
+      "weight": 1.0,
+      "_src": "personcard_getinitials",
+      "_tgt": "personcard_personcard",
+      "confidence_score": 1.0,
+      "source": "personcard_getinitials",
+      "target": "personcard_personcard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\Pill.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_pill_tsx",
+      "_tgt": "pill_pill",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_pill_tsx",
+      "target": "pill_pill"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "D:\\TKS-Dubai\\src\\components\\PillarCard.tsx",
-      "source_location": "L17",
+      "source_location": "L15",
       "weight": 1.0,
       "_src": "d_tks_dubai_src_components_pillarcard_tsx",
       "_tgt": "pillarcard_pillarcard",
+      "confidence_score": 1.0,
       "source": "d_tks_dubai_src_components_pillarcard_tsx",
-      "target": "pillarcard_pillarcard",
-      "confidence_score": 1.0
+      "target": "pillarcard_pillarcard"
     },
     {
       "relation": "contains",
@@ -835,9 +1897,33 @@
       "weight": 1.0,
       "_src": "d_tks_dubai_src_components_processtimeline_tsx",
       "_tgt": "processtimeline_processtimeline",
+      "confidence_score": 1.0,
       "source": "d_tks_dubai_src_components_processtimeline_tsx",
-      "target": "processtimeline_processtimeline",
-      "confidence_score": 1.0
+      "target": "processtimeline_processtimeline"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\ProductCard.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_productcard_tsx",
+      "_tgt": "productcard_productcard",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_productcard_tsx",
+      "target": "productcard_productcard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\ProductDetailPage.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_productdetailpage_tsx",
+      "_tgt": "productdetailpage_renderctalink",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_productdetailpage_tsx",
+      "target": "productdetailpage_renderctalink"
     },
     {
       "relation": "contains",
@@ -847,69 +1933,57 @@
       "weight": 1.0,
       "_src": "d_tks_dubai_src_components_reveal_tsx",
       "_tgt": "reveal_reveal",
+      "confidence_score": 1.0,
       "source": "d_tks_dubai_src_components_reveal_tsx",
-      "target": "reveal_reveal",
-      "confidence_score": 1.0
+      "target": "reveal_reveal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\ScrollToTop.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_components_scrolltotop_tsx",
+      "_tgt": "scrolltotop_scrolltotop",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_scrolltotop_tsx",
+      "target": "scrolltotop_scrolltotop"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "D:\\TKS-Dubai\\src\\components\\SectionHeader.tsx",
-      "source_location": "L22",
+      "source_location": "L15",
       "weight": 1.0,
       "_src": "d_tks_dubai_src_components_sectionheader_tsx",
       "_tgt": "sectionheader_sectionheader",
+      "confidence_score": 1.0,
       "source": "d_tks_dubai_src_components_sectionheader_tsx",
-      "target": "sectionheader_sectionheader",
-      "confidence_score": 1.0
+      "target": "sectionheader_sectionheader"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "D:\\TKS-Dubai\\src\\components\\SpotlightCard.tsx",
-      "source_location": "L30",
+      "source_file": "D:\\TKS-Dubai\\src\\components\\SiteLoader.tsx",
+      "source_location": "L8",
       "weight": 1.0,
-      "_src": "d_tks_dubai_src_components_spotlightcard_tsx",
-      "_tgt": "spotlightcard_spotlightcard",
-      "source": "d_tks_dubai_src_components_spotlightcard_tsx",
-      "target": "spotlightcard_spotlightcard",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "D:\\TKS-Dubai\\src\\components\\ThemeToggle.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_src": "d_tks_dubai_src_components_themetoggle_tsx",
-      "_tgt": "themetoggle_themetoggle",
-      "source": "d_tks_dubai_src_components_themetoggle_tsx",
-      "target": "themetoggle_themetoggle",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "D:\\TKS-Dubai\\src\\components\\ThemeToggle.tsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "_src": "themetoggle_themetoggle",
-      "_tgt": "theme_toggletheme",
-      "source": "themetoggle_themetoggle",
-      "target": "theme_toggletheme"
+      "_src": "d_tks_dubai_src_components_siteloader_tsx",
+      "_tgt": "siteloader_siteloader",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_components_siteloader_tsx",
+      "target": "siteloader_siteloader"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "D:\\TKS-Dubai\\src\\components\\ValueTile.tsx",
-      "source_location": "L20",
+      "source_location": "L38",
       "weight": 1.0,
       "_src": "d_tks_dubai_src_components_valuetile_tsx",
       "_tgt": "valuetile_valuetile",
+      "confidence_score": 1.0,
       "source": "d_tks_dubai_src_components_valuetile_tsx",
-      "target": "valuetile_valuetile",
-      "confidence_score": 1.0
+      "target": "valuetile_valuetile"
     },
     {
       "relation": "contains",
@@ -919,9 +1993,9 @@
       "weight": 1.0,
       "_src": "d_tks_dubai_src_components_whatsappfab_tsx",
       "_tgt": "whatsappfab_whatsappfab",
+      "confidence_score": 1.0,
       "source": "d_tks_dubai_src_components_whatsappfab_tsx",
-      "target": "whatsappfab_whatsappfab",
-      "confidence_score": 1.0
+      "target": "whatsappfab_whatsappfab"
     },
     {
       "relation": "calls",
@@ -938,14 +2012,86 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\data\\enterprise-ai.ts",
+      "source_location": "L324",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_data_enterprise_ai_ts",
+      "_tgt": "enterprise_ai_getenterpriseaibyslug",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_data_enterprise_ai_ts",
+      "target": "enterprise_ai_getenterpriseaibyslug"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\EnterpriseAIDetail.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "enterprise_ai_getenterpriseaibyslug",
+      "_tgt": "enterpriseaidetail_enterpriseaidetailroute",
+      "source": "enterprise_ai_getenterpriseaibyslug",
+      "target": "enterpriseaidetail_enterpriseaidetailroute"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\data\\industries.ts",
+      "source_location": "L309",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_data_industries_ts",
+      "_tgt": "industries_getindustrybyslug",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_data_industries_ts",
+      "target": "industries_getindustrybyslug"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\IndustryDetail.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "industries_getindustrybyslug",
+      "_tgt": "industrydetail_industrydetailroute",
+      "source": "industries_getindustrybyslug",
+      "target": "industrydetail_industrydetailroute"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\data\\platforms.ts",
+      "source_location": "L310",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_data_platforms_ts",
+      "_tgt": "platforms_getplatformbyslug",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_data_platforms_ts",
+      "target": "platforms_getplatformbyslug"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\PlatformDetail.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "platforms_getplatformbyslug",
+      "_tgt": "platformdetail_platformdetailroute",
+      "source": "platforms_getplatformbyslug",
+      "target": "platformdetail_platformdetailroute"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "D:\\TKS-Dubai\\src\\data\\services\\index.ts",
       "source_location": "L20",
       "weight": 1.0,
       "_src": "d_tks_dubai_src_data_services_index_ts",
       "_tgt": "index_getservicebyslug",
+      "confidence_score": 1.0,
       "source": "d_tks_dubai_src_data_services_index_ts",
-      "target": "index_getservicebyslug",
-      "confidence_score": 1.0
+      "target": "index_getservicebyslug"
     },
     {
       "relation": "calls",
@@ -954,46 +2100,58 @@
       "source_file": "D:\\TKS-Dubai\\src\\pages\\ServiceDetail.tsx",
       "source_location": "L13",
       "weight": 1.0,
-      "_src": "servicedetail_servicedetailroute",
-      "_tgt": "index_getservicebyslug",
+      "_src": "index_getservicebyslug",
+      "_tgt": "servicedetail_servicedetailroute",
       "source": "index_getservicebyslug",
       "target": "servicedetail_servicedetailroute"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "D:\\TKS-Dubai\\src\\lib\\theme.ts",
-      "source_location": "L5",
+      "source_file": "D:\\TKS-Dubai\\src\\i18n\\LanguageContext.tsx",
+      "source_location": "L26",
       "weight": 1.0,
-      "_src": "d_tks_dubai_src_lib_theme_ts",
-      "_tgt": "theme_getinitialtheme",
-      "source": "d_tks_dubai_src_lib_theme_ts",
-      "target": "theme_getinitialtheme",
-      "confidence_score": 1.0
+      "_src": "d_tks_dubai_src_i18n_languagecontext_tsx",
+      "_tgt": "languagecontext_languageprovider",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_i18n_languagecontext_tsx",
+      "target": "languagecontext_languageprovider"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "D:\\TKS-Dubai\\src\\lib\\theme.ts",
-      "source_location": "L12",
+      "source_file": "D:\\TKS-Dubai\\src\\i18n\\LocalizedLink.tsx",
+      "source_location": "L27",
       "weight": 1.0,
-      "_src": "d_tks_dubai_src_lib_theme_ts",
-      "_tgt": "theme_applytheme",
-      "source": "d_tks_dubai_src_lib_theme_ts",
-      "target": "theme_applytheme",
-      "confidence_score": 1.0
+      "_src": "d_tks_dubai_src_i18n_localizedlink_tsx",
+      "_tgt": "localizedlink_extlink",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_i18n_localizedlink_tsx",
+      "target": "localizedlink_extlink"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "D:\\TKS-Dubai\\src\\lib\\theme.ts",
-      "source_location": "L21",
+      "source_file": "D:\\TKS-Dubai\\src\\i18n\\strings.ts",
+      "source_location": "L1023",
       "weight": 1.0,
-      "_src": "d_tks_dubai_src_lib_theme_ts",
-      "_tgt": "theme_toggletheme",
-      "source": "d_tks_dubai_src_lib_theme_ts",
-      "target": "theme_toggletheme",
-      "confidence_score": 1.0
+      "_src": "d_tks_dubai_src_i18n_strings_ts",
+      "_tgt": "strings_tr",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_i18n_strings_ts",
+      "target": "strings_tr"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\i18n\\useT.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_i18n_uset_ts",
+      "_tgt": "uset_uset",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_i18n_uset_ts",
+      "target": "uset_uset"
     },
     {
       "relation": "contains",
@@ -1003,21 +2161,69 @@
       "weight": 1.0,
       "_src": "d_tks_dubai_src_lib_whatsapp_ts",
       "_tgt": "whatsapp_buildwhatsapplink",
+      "confidence_score": 1.0,
       "source": "d_tks_dubai_src_lib_whatsapp_ts",
-      "target": "whatsapp_buildwhatsapplink",
-      "confidence_score": 1.0
+      "target": "whatsapp_buildwhatsapplink"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "D:\\TKS-Dubai\\src\\pages\\NotFound.tsx",
-      "source_location": "L4",
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\AboutFAQs.tsx",
+      "source_location": "L47",
       "weight": 1.0,
-      "_src": "d_tks_dubai_src_pages_notfound_tsx",
-      "_tgt": "notfound_notfound",
-      "source": "d_tks_dubai_src_pages_notfound_tsx",
-      "target": "notfound_notfound",
-      "confidence_score": 1.0
+      "_src": "d_tks_dubai_src_pages_aboutfaqs_tsx",
+      "_tgt": "aboutfaqs_faqitem",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_pages_aboutfaqs_tsx",
+      "target": "aboutfaqs_faqitem"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\AboutFAQs.tsx",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_pages_aboutfaqs_tsx",
+      "_tgt": "aboutfaqs_aboutfaqs",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_pages_aboutfaqs_tsx",
+      "target": "aboutfaqs_aboutfaqs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\EnterpriseAIDetail.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_pages_enterpriseaidetail_tsx",
+      "_tgt": "enterpriseaidetail_enterpriseaidetailroute",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_pages_enterpriseaidetail_tsx",
+      "target": "enterpriseaidetail_enterpriseaidetailroute"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\IndustryDetail.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_pages_industrydetail_tsx",
+      "_tgt": "industrydetail_industrydetailroute",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_pages_industrydetail_tsx",
+      "target": "industrydetail_industrydetailroute"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\TKS-Dubai\\src\\pages\\PlatformDetail.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_src": "d_tks_dubai_src_pages_platformdetail_tsx",
+      "_tgt": "platformdetail_platformdetailroute",
+      "confidence_score": 1.0,
+      "source": "d_tks_dubai_src_pages_platformdetail_tsx",
+      "target": "platformdetail_platformdetailroute"
     },
     {
       "relation": "contains",
@@ -1027,9 +2233,9 @@
       "weight": 1.0,
       "_src": "d_tks_dubai_src_pages_servicedetail_tsx",
       "_tgt": "servicedetail_servicedetailroute",
+      "confidence_score": 1.0,
       "source": "d_tks_dubai_src_pages_servicedetail_tsx",
-      "target": "servicedetail_servicedetailroute",
-      "confidence_score": 1.0
+      "target": "servicedetail_servicedetailroute"
     }
   ],
   "hyperedges": []

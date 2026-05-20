@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import styles from "./SiteLoader.module.css";
 
-const LOADER_DURATION_MS = 5000;
-const EXIT_DURATION_MS = 700;
-const READY_AT_MS = 4200;
+const LOADER_DURATION_MS = 4000;
+const EXIT_DURATION_MS = 650;
+const READY_AT_MS = 3300;
 
 export function SiteLoader() {
   const [show, setShow] = useState(true);

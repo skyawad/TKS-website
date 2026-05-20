@@ -1,0 +1,159 @@
+.scene {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  color: var(--brand);
+}
+
+.arrow {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.55;
+}
+
+.arrowPath {
+  stroke-dasharray: 520;
+  stroke-dashoffset: 520;
+  animation: ladderDraw 5.5s ease-in-out infinite;
+}
+
+.arrowHead {
+  fill: currentColor;
+  opacity: 0;
+  animation: headFade 5.5s ease-in-out infinite;
+}
+
+@keyframes ladderDraw {
+  0% { stroke-dashoffset: 520; }
+  45%, 80% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 520; }
+}
+
+@keyframes headFade {
+  0%, 38% { opacity: 0; }
+  46%, 80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.stepCard {
+  position: absolute;
+  background: var(--canvas);
+  border: var(--card-edge);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-3);
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 124px;
+  animation: bobUp 5s ease-in-out infinite;
+}
+
+.s1 { top: 240px; left: 18px;   animation-delay: -0.4s; }
+.s2 { top: 140px; left: 110px;  animation-delay: -1.6s; }
+.s3 { top: 40px;  right: 30px;  animation-delay: -2.8s; }
+
+.stepRank {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.stepRole {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+.stepBadge {
+  font-size: 11px;
+  color: var(--text-2);
+}
+
+.team {
+  position: absolute;
+  bottom: 6px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: -8px;
+}
+
+.dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--canvas);
+  border: 2px solid var(--canvas);
+  box-shadow: var(--shadow-2);
+  margin-left: -8px;
+  animation: pulseDot 4s ease-in-out infinite;
+}
+
+.dot:first-child { margin-left: 0; }
+
+.d1 { background: var(--icon-orange); animation-delay: 0s; }
+.d2 { background: var(--icon-blue);   animation-delay: 0.5s; }
+.d3 { background: var(--icon-purple); animation-delay: 1s; }
+.d4 { background: var(--ink); animation-delay: 1.5s; }
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.metric {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  background: var(--canvas);
+  border: var(--card-edge);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-3);
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  animation: bobUp 4.5s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
+.metricVal {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--icon-green);
+  line-height: 1;
+}
+
+.metricLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+
+@keyframes bobUp {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arrowPath, .arrowHead, .stepCard, .dot, .metric { animation: none; }
+  .arrowPath { stroke-dashoffset: 0; }
+  .arrowHead { opacity: 1; }
+}

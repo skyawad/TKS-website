@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "../components/Button";
 import { HeroSection } from "../components/HeroSection";
-import { FloatingCard } from "../components/FloatingCard";
-import { Icon } from "../components/Icon";
+import { HeroCareers } from "../components/HeroCareers";
 import { PageCTA } from "../components/PageCTA";
 import { PillarCard } from "../components/PillarCard";
 import { Reveal } from "../components/Reveal";
@@ -77,14 +76,7 @@ export function AboutCareers() {
             </Link>
           </>
         }
-        illustration={
-          <>
-            <FloatingCard label="Data Engineering" glyph={<Icon name="data-eng" size={14} />} tone="blue" position={{ top: 20, left: 20 }} delayMs={0} />
-            <FloatingCard label="Analytics" glyph={<Icon name="analytics" size={14} />} tone="orange" position={{ top: 110, right: 30 }} delayMs={300} />
-            <FloatingCard label="AI / LLM" glyph={<Icon name="ai-strategy" size={14} />} tone="purple" position={{ top: 200, left: 40 }} delayMs={600} />
-            <FloatingCard label="Geospatial" glyph={<Icon name="geospatial" size={14} />} tone="green" position={{ top: 280, right: 20 }} delayMs={900} />
-          </>
-        }
+        illustration={<HeroCareers />}
       />
 
       <section className={styles.section}>

@@ -36,16 +36,19 @@
   height: 280px;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .stage {
-    transform: scale(0.62);
+    width: 540px;
+    transform: scale(0.7);
     transform-origin: center;
   }
 }
 
-@media (max-width: 480px) {
+/* Below 640px the 720px composition gets unreadable. Hide the stage and
+   keep the label + progress bar — cleaner mobile experience. */
+@media (max-width: 640px) {
   .stage {
-    transform: scale(0.5);
+    display: none;
   }
 }
 
@@ -370,19 +373,17 @@
   width: 0;
   background: linear-gradient(90deg, var(--brand) 0%, #FF7E3D 60%, #FFB37D 100%);
   border-radius: 999px;
-  animation: progressFill 4.4s cubic-bezier(0.4, 0.0, 0.2, 1) 0.4s forwards;
+  /* Continuous, steady fill 0 → 100%. Linear curve so the bar never holds. */
+  animation: progressFill 3.4s linear 0.3s forwards;
   box-shadow: 0 0 12px rgba(255, 74, 0, 0.5);
 }
 
 @keyframes progressFill {
-  0%   { width: 0; }
-  18%  { width: 22%; }
-  45%  { width: 55%; }
-  72%  { width: 82%; }
+  0%   { width: 0;    }
   100% { width: 100%; }
 }
 
-/* Moving highlight inside the fill — a shine that travels across the bar */
+/* Moving highlight inside the fill — continuous shine, no pause between sweeps. */
 .progressFill::after {
   content: "";
   position: absolute;
@@ -396,7 +397,7 @@
     rgba(255, 255, 255, 0.55) 50%,
     transparent 100%
   );
-  animation: progressShine 1.6s ease-in-out infinite 0.4s;
+  animation: progressShine 1.3s linear infinite 0.3s;
 }
 
 @keyframes progressShine {

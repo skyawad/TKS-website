@@ -1,0 +1,141 @@
+.scene {
+  position: relative;
+  width: 100%;
+  height: 360px;
+}
+
+.quoteCard {
+  position: absolute;
+  width: 250px;
+  background: var(--canvas);
+  border: var(--card-edge);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-3);
+  padding: 18px 18px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: stackCycle 9s ease-in-out infinite;
+}
+
+.q1 {
+  top: 200px;
+  left: 12px;
+  transform: rotate(-4deg);
+  animation-delay: 0s;
+  z-index: 2;
+}
+
+.q2 {
+  top: 95px;
+  left: 60px;
+  transform: rotate(2deg);
+  animation-delay: -3s;
+  z-index: 3;
+}
+
+.q3 {
+  top: -5px;
+  left: 30px;
+  transform: rotate(-2deg);
+  animation-delay: -6s;
+  z-index: 4;
+}
+
+@keyframes stackCycle {
+  0%, 100% { transform: translateY(0) rotate(var(--rot, 0deg)); }
+  50% { transform: translateY(-8px) rotate(var(--rot, 0deg)); }
+}
+
+.q1 { --rot: -4deg; }
+.q2 { --rot:  2deg; }
+.q3 { --rot: -2deg; }
+
+.glyph {
+  font-family: var(--font-display);
+  font-size: 42px;
+  line-height: 0.5;
+  color: var(--brand);
+  font-weight: 800;
+}
+
+.qBody {
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--ink);
+  margin: 0;
+}
+
+.qFoot {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-top: 1px solid var(--surface-2);
+  padding-top: 8px;
+}
+
+.qWho {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--ink);
+}
+
+.qWhere {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+
+.kpi {
+  position: absolute;
+  background: var(--canvas);
+  border: var(--card-edge);
+  border-radius: 999px;
+  box-shadow: var(--shadow-3);
+  padding: 10px 16px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  animation: bob 5s ease-in-out infinite;
+}
+
+.kpiTop {
+  top: 30px;
+  right: 10px;
+  animation-delay: -1s;
+}
+
+.kpiBot {
+  bottom: 20px;
+  right: 30px;
+  animation-delay: -2.5s;
+}
+
+.kpiVal {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--brand);
+  line-height: 1;
+}
+
+.kpiLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quoteCard, .kpi { animation: none; }
+}

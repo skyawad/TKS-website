@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
 import { Button } from "../components/Button";
 import { Pill } from "../components/Pill";
+import { LocalizedLink } from "../i18n/LocalizedLink";
+import { useT } from "../i18n/useT";
 import styles from "./NotFound.module.css";
 
 /**
@@ -12,25 +13,23 @@ import styles from "./NotFound.module.css";
  * metaphor for missing routes.
  */
 export function NotFound() {
+  const t = useT();
   return (
     <section className={styles.page} aria-labelledby="notfound-title">
       <div className={styles.inner}>
         <div className={styles.copy}>
-          <Pill variant="brand">Error · 404</Pill>
+          <Pill variant="brand">{t("nf.eyebrow")}</Pill>
           <h1 id="notfound-title" className={styles.title}>
-            Looks like we got <em>disconnected.</em>
+            {t("nf.titleA")} <em>{t("nf.titleB")}</em>
           </h1>
-          <p className={styles.body}>
-            The page you're after isn't plugged in — yanked out, never built, or
-            moved somewhere else. Pick a working route below.
-          </p>
+          <p className={styles.body}>{t("nf.body")}</p>
           <div className={styles.actions}>
-            <Link to="/">
-              <Button variant="primary">Back to home</Button>
-            </Link>
-            <Link to="/services">
-              <Button variant="secondary">Browse services</Button>
-            </Link>
+            <LocalizedLink to="/">
+              <Button variant="primary">{t("nf.home")}</Button>
+            </LocalizedLink>
+            <LocalizedLink to="/services">
+              <Button variant="secondary">{t("nf.browse")}</Button>
+            </LocalizedLink>
           </div>
         </div>
 

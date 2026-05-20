@@ -1,0 +1,24 @@
+.track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  z-index: 1100;
+  pointer-events: none;
+}
+
+.fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--brand) 0%, #ff7e3d 100%);
+  box-shadow: 0 0 8px rgba(255, 74, 0, 0.45);
+  transition: width 80ms linear;
+  border-radius: 0 2px 2px 0;
+}
+
+:global([dir="rtl"]) .fill {
+  margin-left: auto;
+  border-radius: 2px 0 0 2px;
+}

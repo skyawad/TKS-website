@@ -7,8 +7,13 @@ import styles from "./LangFallbackBanner.module.css";
  *  English content with a small notice strip telling the Arabic visitor
  *  that an Arabic version is coming. */
 const TRANSLATED_PATHS = new Set<string>([
-  "/", "/contact",
-  "/ar", "/ar/contact",
+  // English (the LangFallbackBanner only shows in /ar anyway, but
+  // these paths are still listed for symmetry / future use).
+  "/", "/contact", "/services", "/enterprise-ai", "/platforms", "/industries",
+  "/about", "/about/partnerships", "/about/customer-stories",
+  // Arabic — pages fully translated to MSA
+  "/ar", "/ar/contact", "/ar/services", "/ar/enterprise-ai", "/ar/platforms",
+  "/ar/industries", "/ar/about", "/ar/about/partnerships", "/ar/about/customer-stories",
 ]);
 
 export function LangFallbackBanner() {
