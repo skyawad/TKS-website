@@ -1,0 +1,164 @@
+.scene {
+  position: relative;
+  width: 100%;
+  height: 360px;
+}
+
+.lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.line {
+  stroke: var(--brand-tint);
+  stroke-width: 1.5;
+  fill: none;
+  stroke-dasharray: 4 5;
+  opacity: 0.85;
+}
+
+.flowDot {
+  filter: drop-shadow(0 0 5px currentColor);
+}
+
+/* Central platform hub */
+.hub {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+}
+
+.hubRing,
+.hubRing2 {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--brand);
+  opacity: 0;
+  animation: hubRing 2.6s ease-out infinite;
+}
+
+.hubRing2 {
+  animation-delay: 1.3s;
+}
+
+@keyframes hubRing {
+  0%   { transform: scale(0.7); opacity: 0.6; }
+  100% { transform: scale(1.4); opacity: 0;   }
+}
+
+.hubCore {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, var(--brand) 0%, #FF7E3D 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: var(--canvas);
+  box-shadow: var(--shadow-4), 0 0 0 8px rgba(255, 74, 0, 0.08);
+  z-index: 2;
+  animation: hubBob 4s ease-in-out infinite;
+}
+
+.hubMark {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.hubLabel {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  opacity: 0.92;
+}
+
+@keyframes hubBob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+
+/* Capability satellite cards */
+.cap {
+  position: absolute;
+  background: var(--canvas);
+  border: var(--card-edge);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-3);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 130px;
+  animation: capBob 5s ease-in-out infinite;
+}
+
+.capIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  color: var(--canvas);
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.iAnalytics { background: var(--icon-orange); }
+.iAi        { background: var(--icon-purple); }
+.iData      { background: var(--icon-blue); }
+.iOps       { background: var(--icon-green); }
+
+.capBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.capLabel {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.capSub {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-2);
+  letter-spacing: 0.04em;
+}
+
+.capTl { top: 30px;    left: 0;     animation-delay: 0s; }
+.capTr { top: 30px;    right: 0;    animation-delay: -1.3s; }
+.capBl { bottom: 30px; left: 0;     animation-delay: -2.5s; }
+.capBr { bottom: 30px; right: 0;    animation-delay: -3.8s; }
+
+@keyframes capBob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-5px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hubCore, .cap, .hubRing, .hubRing2 {
+    animation: none;
+  }
+  .hubRing, .hubRing2, .flowDot { display: none; }
+}

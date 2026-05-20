@@ -1,0 +1,108 @@
+.scene {
+  position: relative;
+  width: 100%;
+  height: 360px;
+}
+
+.graph {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.edge {
+  stroke: var(--brand-tint);
+  stroke-width: 1.5;
+  opacity: 0.7;
+}
+
+.node {
+  fill: var(--canvas);
+  stroke: var(--brand);
+  stroke-width: 2.5;
+  filter: drop-shadow(0 0 4px rgba(255, 74, 0, 0.3));
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: nodePulse 3s ease-in-out infinite;
+}
+
+.n1 { animation-delay: 0s; }
+.n2 { animation-delay: 0.4s; }
+.n3 { animation-delay: 0.8s; }
+.n4 { animation-delay: 1.2s; }
+.n5 { animation-delay: 1.6s; }
+.n6 { animation-delay: 2.0s; }
+
+.nCenter {
+  fill: var(--brand);
+  stroke: var(--brand-dark);
+  filter: drop-shadow(0 0 8px rgba(255, 74, 0, 0.55));
+  animation-delay: 0.2s;
+}
+
+@keyframes nodePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.18); }
+}
+
+.pulse {
+  filter: drop-shadow(0 0 6px var(--brand));
+}
+
+/* Floating concept tags */
+.tag {
+  position: absolute;
+  background: var(--canvas);
+  border: var(--card-edge);
+  border-radius: var(--r-pill);
+  padding: 6px 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--ink);
+  box-shadow: var(--shadow-2);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  animation: bob 4s ease-in-out infinite;
+}
+
+.tagDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brand);
+  display: inline-block;
+}
+
+.tagAgent {
+  top: 12px;
+  right: 20px;
+  animation-delay: 0s;
+}
+.tagLlm {
+  bottom: 90px;
+  right: 0;
+  animation-delay: -1s;
+}
+.tagLlm .tagDot { background: var(--icon-purple); }
+
+.tagRag {
+  bottom: 20px;
+  left: 80px;
+  animation-delay: -2s;
+}
+.tagRag .tagDot { background: var(--icon-blue); }
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .node, .tag { animation: none; }
+  .pulse { display: none; }
+}

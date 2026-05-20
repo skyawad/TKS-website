@@ -1,0 +1,148 @@
+.page {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-9) var(--space-5);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-7);
+  align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--t-display);
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-display);
+  color: var(--ink);
+  margin: 0;
+}
+
+.title em {
+  font-style: normal;
+  color: var(--brand);
+}
+
+.body {
+  font-size: 18px;
+  color: var(--text-2);
+  max-width: 540px;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   Disconnected-plug illustration
+   ============================================================ */
+.illus {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  justify-self: center;
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Plug + cord group bobs back away from the socket on every cycle —
+   yanked out, dangles, then drifts toward the socket again. */
+.plugGroup {
+  transform-origin: 200px 170px;
+  animation: plugUnplug 4.5s cubic-bezier(0.55, 0.05, 0.45, 0.95) infinite;
+}
+
+@keyframes plugUnplug {
+  /* Plugged in (rest position) */
+  0%   { transform: translate(0, 0) rotate(0); }
+  /* Yank — sharp pull back + slight upward kick */
+  12%  { transform: translate(-40px, -12px) rotate(-4deg); }
+  /* Settle into "dangling" */
+  22%  { transform: translate(-46px, -2px) rotate(-3deg); }
+  /* Gentle sway */
+  40%  { transform: translate(-50px, 2px)  rotate(-5deg); }
+  60%  { transform: translate(-46px, -2px) rotate(-2deg); }
+  /* Drift back toward socket */
+  85%  { transform: translate(-10px, 0)    rotate(-1deg); }
+  100% { transform: translate(0, 0) rotate(0); }
+}
+
+/* Sparks flash at the unplug moment + briefly after */
+.sparks {
+  opacity: 0;
+  animation: sparkFlash 4.5s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes sparkFlash {
+  0%, 6%        { opacity: 0; transform: scale(0.6); }
+  10%, 18%      { opacity: 1; transform: scale(1.05); }
+  22%           { opacity: 0.4; transform: scale(0.95); }
+  26%, 100%     { opacity: 0; transform: scale(0.6); }
+}
+
+/* Dust puff billows out when plug is yanked */
+.puff {
+  opacity: 0;
+  transform-origin: 270px 130px;
+  animation: puffFade 4.5s ease-out infinite;
+}
+
+@keyframes puffFade {
+  0%, 6%        { opacity: 0; transform: scale(0.4); }
+  12%           { opacity: 0.9; transform: scale(1); }
+  30%           { opacity: 0.5; transform: scale(1.2) translateY(-4px); }
+  45%, 100%     { opacity: 0; transform: scale(1.4) translateY(-10px); }
+}
+
+/* Wall pulses very faintly to feel "alive" */
+.wall {
+  animation: wallBreathe 4.5s ease-in-out infinite;
+  transform-origin: 320px 130px;
+}
+
+@keyframes wallBreathe {
+  0%, 100% { opacity: 1; }
+  12%      { opacity: 0.85; }
+  18%      { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plugGroup, .sparks, .puff, .wall {
+    animation: none;
+  }
+  .plugGroup {
+    transform: translate(-46px, 0) rotate(-3deg);
+  }
+  .sparks {
+    opacity: 0.6;
+  }
+}

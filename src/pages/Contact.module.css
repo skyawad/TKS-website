@@ -1,0 +1,264 @@
+.page {
+}
+
+.section {
+  padding: var(--space-8) var(--space-5);
+}
+
+.sectionAlt {
+  background: var(--brand-wash);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-7);
+}
+
+@media (max-width: 1024px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+}
+
+.formCol {
+}
+
+.methodsCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* Method cards */
+.methodCard,
+.hoursCard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: var(--space-4) var(--space-5);
+  background: var(--surface-1);
+  border: 1px solid var(--surface-2);
+  border-radius: var(--r-lg);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.methodCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
+}
+
+.methodCardWhatsapp {
+  background: var(--whatsapp-green);
+  color: var(--canvas);
+  border-color: var(--whatsapp-green);
+}
+
+.methodLabel {
+  font-family: var(--font-mono);
+  font-size: var(--t-label);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+
+.methodCardWhatsapp .methodLabel {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.methodValue {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--ink);
+}
+
+.methodCardWhatsapp .methodValue {
+  color: var(--canvas);
+}
+
+.methodNote {
+  font-size: 12px;
+  color: var(--text-2);
+}
+
+.methodCardWhatsapp .methodNote {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Office card */
+.officeCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+@media (max-width: 768px) {
+  .officeCard {
+    grid-template-columns: 1fr;
+  }
+}
+
+.officeText {
+  background: var(--canvas);
+  border: 1px solid var(--surface-2);
+  border-radius: var(--r-lg);
+  padding: var(--space-5);
+}
+
+.officeLabel {
+  font-family: var(--font-mono);
+  font-size: var(--t-label);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: var(--space-2);
+  display: block;
+}
+
+.officeAddress {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: var(--lh-snug);
+  color: var(--ink);
+  margin: 0 0 var(--space-3);
+}
+
+.officeMissing {
+  font-size: 12px;
+  color: var(--text-2);
+  margin: 0;
+}
+
+.officeMap {
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  min-height: 280px;
+  background: var(--canvas);
+  border: 1px solid var(--surface-2);
+}
+
+.mapFrame {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  border: 0;
+}
+
+.mapPlaceholder {
+  display: grid;
+  place-items: center;
+  min-height: 280px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--text-2);
+  text-align: center;
+  padding: var(--space-4);
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0,
+    transparent 12px,
+    var(--surface-2) 12px,
+    var(--surface-2) 13px
+  );
+}
+
+/* People grid */
+.peopleGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+@media (max-width: 768px) {
+  .peopleGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.partnerStrip {
+  background: var(--surface-1);
+  border-radius: var(--r-lg);
+  padding: var(--space-4) var(--space-5);
+}
+
+.partnerHeading {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--t-label);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--text-2);
+  margin-bottom: var(--space-3);
+}
+
+.partnerList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* Careers band */
+.careersBand {
+  background: var(--ink);
+  color: var(--canvas);
+}
+
+.careersInline {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.careersLabel {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--t-label);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: 6px;
+}
+
+.careersBody {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--canvas);
+  margin: 0;
+}
+
+.careersLink {
+  color: var(--brand);
+  font-weight: 700;
+}
+.careersLink:hover {
+  color: var(--brand-tint);
+}
+
+.careersCta {
+  background: var(--canvas);
+  color: var(--ink);
+  padding: 12px 22px;
+  border-radius: var(--r-pill);
+  font-weight: 700;
+  font-size: var(--t-small);
+  display: inline-block;
+  text-decoration: none;
+}
+.careersCta:hover {
+  background: var(--surface-1);
+}

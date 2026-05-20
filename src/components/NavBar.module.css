@@ -1,0 +1,314 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: box-shadow 200ms ease, background-color 200ms ease;
+}
+
+.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: var(--shadow-1);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.logo:hover .logoText {
+  color: var(--brand);
+}
+.logoText {
+  transition: color 180ms ease;
+}
+/* (logoMark removed — text-only brand) */
+.logoMarkLegacyUnused {
+  width: 26px;
+  height: 26px;
+  background: var(--brand);
+  color: var(--canvas);
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 14px;
+}
+.logoText {
+  display: none;
+}
+@media (min-width: 768px) {
+  .logoText {
+    display: inline;
+  }
+}
+
+/* Desktop nav */
+.nav {
+  display: none;
+  flex: 1;
+}
+@media (min-width: 1024px) {
+  .nav {
+    display: block;
+  }
+}
+
+.navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: var(--space-5);
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 4px;
+  background: transparent;
+  border: none;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+.navLink:hover,
+.navLinkActive {
+  color: var(--ink);
+}
+
+.caret {
+  font-size: 10px;
+  color: var(--text-2);
+}
+
+/* Mega menu */
+.megaMenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* No margin-top — any gap between nav item and dropdown creates a
+     "dead zone" where the mouse exits the hover region, prematurely
+     closing the menu before the user can click a child link. Instead,
+     pad inside the menu and use ::before as an invisible hover bridge. */
+  margin-top: 0;
+  padding: var(--space-3);
+  background: var(--canvas);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-3);
+  min-width: 260px;
+  border: 1px solid var(--surface-2);
+  animation: megaIn 180ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* Invisible bridge above the dropdown so fast diagonal mouse moves from
+   the parent link still register as "inside" the menu region. */
+.megaMenu::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  height: 8px;
+}
+
+@keyframes megaIn {
+  0%   { opacity: 0; transform: translateX(-50%) translateY(-4px); }
+  100% { opacity: 1; transform: translateX(-50%) translateY(0);    }
+}
+
+.megaList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.megaLink {
+  display: block;
+  padding: 10px 12px;
+  border-radius: var(--r-md);
+  transition: background-color 150ms ease;
+}
+.megaLink:hover,
+.megaLinkActive {
+  background: var(--surface-1);
+}
+
+.megaLinkTitle {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+/* Right actions — desktop only. On tablet/mobile the hamburger is the
+   only right-side control, otherwise the bar gets crowded. */
+.actions {
+  display: none;
+  align-items: center;
+  gap: var(--space-3);
+}
+@media (min-width: 1024px) {
+  .actions {
+    display: flex;
+  }
+}
+
+.signIn {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink);
+  padding: 8px 10px;
+}
+.signIn:hover {
+  color: var(--brand);
+}
+
+/* Hamburger */
+.hamburger {
+  background: var(--surface-1);
+  border: 1px solid var(--surface-2);
+  border-radius: var(--r-md);
+  font-size: 20px;
+  line-height: 1;
+  color: var(--ink);
+  padding: 0;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  display: inline-grid;
+  place-items: center;
+  transition: background-color 150ms ease;
+}
+.hamburger:hover,
+.hamburger:focus-visible {
+  background: var(--surface-2);
+}
+@media (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Mobile overlay — must clear the sticky header (≈55px tall) with extra
+   breathing room. Uses safe-area-inset-top for iOS notch. */
+.mobileOverlay {
+  /* Explicit top/right/bottom/left for maximum mobile-Safari compatibility
+     (some older WebKit builds miss `inset` on fixed elements). */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh; /* dvh handles iOS address bar collapse */
+  background: var(--canvas);
+  /* z-index 99 deliberately sits BELOW the header (z-100) so the hamburger
+     ✕ in the sticky header remains tappable to close the overlay. */
+  z-index: 99;
+  padding-top: calc(env(safe-area-inset-top, 0px) + 88px);
+  padding-inline: var(--space-5);
+  padding-bottom: var(--space-7);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  animation: overlayIn 220ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@keyframes overlayIn {
+  0%   { opacity: 0; transform: translateY(-6px); }
+  100% { opacity: 1; transform: translateY(0);    }
+}
+
+.mobileList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  animation: mobileListIn 380ms cubic-bezier(0.2, 0.7, 0.2, 1) 80ms both;
+}
+
+@keyframes mobileListIn {
+  0%   { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0);   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobileOverlay,
+  .mobileList {
+    animation: none;
+  }
+}
+
+.mobileItem {
+  padding-bottom: var(--space-2);
+}
+
+.mobileParent {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--ink);
+  padding-block: 10px;
+  border-bottom: 1px solid var(--surface-2);
+}
+
+.mobileChildren {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0 0 0 var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mobileChild {
+  font-size: 16px;
+  color: var(--ink-muted);
+  padding-block: 8px;
+  display: block;
+  min-height: 36px;
+}
+.mobileChild:active {
+  color: var(--brand);
+}
+
+.mobileCta {
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--surface-2);
+}
+.mobileCta :global(button) {
+  width: 100%;
+}

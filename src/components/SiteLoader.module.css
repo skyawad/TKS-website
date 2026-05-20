@@ -1,0 +1,423 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, var(--brand-wash) 0%, var(--canvas) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  z-index: 2147483646;
+  will-change: opacity, transform;
+}
+
+.overlayOut {
+  animation: overlayOut 0.7s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+  pointer-events: none;
+}
+
+@keyframes overlayOut {
+  0%   { opacity: 1; transform: scale(1);    }
+  100% { opacity: 0; transform: scale(1.04); }
+}
+
+/* ============================================================
+   Stage — 720px wide so core ripples and dashboard never touch.
+   Layout zones (no overlap):
+     [ 0 – 160 ]  source pills (left)
+     [300 – 400]  TKS core      (centre)
+     [410 – 490]  connector wire
+     [500 – 720]  dashboard card (right)
+   ============================================================ */
+.stage {
+  position: relative;
+  width: 720px;
+  max-width: calc(100vw - 32px);
+  height: 280px;
+}
+
+@media (max-width: 760px) {
+  .stage {
+    transform: scale(0.62);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .stage {
+    transform: scale(0.5);
+  }
+}
+
+.wires {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.wire,
+.wireOut {
+  stroke: var(--brand-tint);
+  stroke-width: 1.5;
+  fill: none;
+  stroke-dasharray: 4 5;
+  opacity: 0;
+  animation: wireIn 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s forwards;
+}
+
+.wireOut {
+  stroke: var(--brand);
+  stroke-dasharray: 3 4;
+  animation-delay: 1.4s;
+}
+
+@keyframes wireIn { to { opacity: 0.85; } }
+
+.flowDot,
+.flowDotOut {
+  filter: drop-shadow(0 0 6px currentColor);
+}
+
+/* Source pills — left column ============================== */
+.src {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: var(--canvas);
+  border: var(--card-edge);
+  border-radius: var(--r-pill);
+  box-shadow: var(--shadow-2);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--ink);
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: srcIn 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) forwards,
+             srcBob 4.5s ease-in-out infinite 0.8s;
+  white-space: nowrap;
+}
+
+.srcDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.s1 { top: 44px;  left: 0;   animation-delay: 0s,    0.7s; }
+.s2 { top: 124px; left: 0;   animation-delay: 0.15s, 0.85s; }
+.s3 { top: 204px; left: 0;   animation-delay: 0.30s, 1.0s; }
+
+@keyframes srcIn {
+  0%   { opacity: 0; transform: translateX(-20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes srcBob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-3px); }
+}
+
+/* Core — centre at x=350, ripple max diameter ~170px stays inside 270–435 */
+.core {
+  position: absolute;
+  left: 48.6%;   /* 350/720 */
+  top: 140px;
+  transform: translate(-50%, -50%) scale(0.5);
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  animation: coreIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s forwards;
+  z-index: 2;
+}
+
+.coreRing,
+.coreRing2 {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--brand);
+  opacity: 0;
+  animation: coreRipple 2s cubic-bezier(0.22, 0.61, 0.36, 1) infinite 1s;
+}
+
+.coreRing2 { animation-delay: 2s; }
+
+@keyframes coreRipple {
+  0%   { transform: scale(0.7); opacity: 0.75; }
+  100% { transform: scale(1.7); opacity: 0;    }
+}
+
+.coreMark {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand) 0%, #FF7E3D 100%);
+  color: var(--canvas);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  box-shadow: 0 12px 32px rgba(255, 74, 0, 0.4);
+  animation: corePulse 2.4s ease-in-out infinite 1s;
+}
+
+@keyframes coreIn {
+  0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+  60%  { opacity: 1; transform: translate(-50%, -50%) scale(1.08); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1);    }
+}
+
+@keyframes corePulse {
+  0%, 100% { box-shadow: 0 12px 32px rgba(255, 74, 0, 0.4);  transform: scale(1);    }
+  50%      { box-shadow: 0 16px 40px rgba(255, 74, 0, 0.55); transform: scale(1.04); }
+}
+
+/* Dashboard — far right, x = 500–720 (100px gap from core right edge) */
+.dashboard {
+  position: absolute;
+  right: 0;
+  top: 80px;
+  width: 220px;
+  background: var(--canvas);
+  border: var(--card-edge);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-3);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0;
+  transform: translateX(24px) scale(0.92);
+  animation: dashIn 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) 1.7s forwards,
+             dashBob 5s ease-in-out infinite 2.6s;
+}
+
+@keyframes dashIn {
+  0%   { opacity: 0; transform: translateX(24px) scale(0.92); }
+  100% { opacity: 1; transform: translateX(0)    scale(1);    }
+}
+
+@keyframes dashBob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-3px); }
+}
+
+.dashHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashTitle {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
+.dashDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--icon-green);
+  animation: dashDot 1.4s ease-in-out infinite;
+}
+
+@keyframes dashDot {
+  0%, 100% { transform: scale(1);   opacity: 1;   }
+  50%      { transform: scale(1.5); opacity: 0.55; }
+}
+
+.dashRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 5px 7px;
+  background: var(--brand-wash);
+  border-radius: var(--r-sm);
+}
+
+.kpi b {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--brand);
+  line-height: 1;
+}
+
+.kpi i {
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 8px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+
+.spark {
+  width: 100%;
+  height: 30px;
+}
+
+.sparkLine {
+  stroke-dasharray: 280;
+  stroke-dashoffset: 280;
+  animation: drawLine 1.2s cubic-bezier(0.32, 0.72, 0, 1) 2.3s forwards;
+  filter: drop-shadow(0 0 3px rgba(255, 74, 0, 0.4));
+}
+
+@keyframes drawLine { to { stroke-dashoffset: 0; } }
+
+/* ============================================================
+   Label
+   ============================================================ */
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand);
+  min-height: 16px;
+}
+
+.labelText {
+  opacity: 0;
+  animation: labelIn 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s forwards;
+}
+
+.labelTextReady {
+  animation: labelReadyIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  font-weight: 800;
+}
+
+@keyframes labelIn { to { opacity: 1; } }
+
+@keyframes labelReadyIn {
+  0%   { opacity: 0; transform: translateY(6px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0)   scale(1);   }
+}
+
+.dots {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.dots i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--brand);
+  display: inline-block;
+  animation: dotBounce 1.2s ease-in-out infinite;
+}
+
+.dots i:nth-child(2) { animation-delay: 0.15s; }
+.dots i:nth-child(3) { animation-delay: 0.30s; }
+
+@keyframes dotBounce {
+  0%, 60%, 100% { transform: translateY(0);    opacity: 0.4; }
+  30%           { transform: translateY(-4px); opacity: 1;   }
+}
+
+/* ============================================================
+   Progress bar — determinate fill over the full loader duration
+   with a moving shine highlight for life.
+   ============================================================ */
+.progress {
+  width: min(420px, calc(100vw - 48px));
+  margin-top: var(--space-2);
+  opacity: 0;
+  animation: progressFade 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) 0.4s forwards;
+}
+
+@keyframes progressFade { to { opacity: 1; } }
+
+.progressTrack {
+  position: relative;
+  height: 6px;
+  background: color-mix(in srgb, var(--brand) 15%, transparent);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  background: linear-gradient(90deg, var(--brand) 0%, #FF7E3D 60%, #FFB37D 100%);
+  border-radius: 999px;
+  animation: progressFill 4.4s cubic-bezier(0.4, 0.0, 0.2, 1) 0.4s forwards;
+  box-shadow: 0 0 12px rgba(255, 74, 0, 0.5);
+}
+
+@keyframes progressFill {
+  0%   { width: 0; }
+  18%  { width: 22%; }
+  45%  { width: 55%; }
+  72%  { width: 82%; }
+  100% { width: 100%; }
+}
+
+/* Moving highlight inside the fill — a shine that travels across the bar */
+.progressFill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -40%;
+  width: 40%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 100%
+  );
+  animation: progressShine 1.6s ease-in-out infinite 0.4s;
+}
+
+@keyframes progressShine {
+  0%   { transform: translateX(0);    }
+  100% { transform: translateX(350%); }
+}
+
+/* ============================================================
+   Reduced-motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .overlay,
+  .wire, .wireOut, .src, .core, .coreRing, .coreRing2, .coreMark,
+  .dashboard, .dashDot, .sparkLine, .dots i, .flowDot, .flowDotOut,
+  .labelText, .labelTextReady,
+  .progress, .progressFill, .progressFill::after, .overlayOut {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .core { transform: translate(-50%, -50%); }
+  .sparkLine { stroke-dashoffset: 0; }
+  .progressFill { width: 100%; }
+}

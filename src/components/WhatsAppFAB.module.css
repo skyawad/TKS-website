@@ -1,0 +1,40 @@
+.fab {
+  position: fixed;
+  bottom: var(--space-5);
+  right: var(--space-5);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--whatsapp-green);
+  color: var(--canvas);
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow-2);
+  z-index: 90;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.fab:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-3);
+}
+
+@media (max-width: 768px) {
+  .fab {
+    width: 48px;
+    height: 48px;
+    bottom: var(--space-4);
+    right: var(--space-4);
+  }
+}
+
+.fab svg {
+  width: 28px;
+  height: 28px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fab:hover {
+    transform: none;
+  }
+}

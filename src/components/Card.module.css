@@ -1,0 +1,31 @@
+.card {
+  border-radius: var(--r-lg);
+  padding: var(--space-5);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.base {
+  background: var(--canvas);
+  border: 1px solid var(--surface-2);
+}
+
+.surface {
+  background: var(--surface-1);
+  border: 1px solid var(--surface-2);
+}
+
+.elevated {
+  background: var(--canvas);
+  box-shadow: var(--shadow-2);
+}
+
+.hoverable:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hoverable:hover {
+    transform: none;
+  }
+}

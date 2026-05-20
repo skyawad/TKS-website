@@ -1,0 +1,147 @@
+.tile {
+  position: relative;
+  background: var(--canvas);
+  border: var(--card-edge);
+  border-radius: var(--r-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-2);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 220ms cubic-bezier(0.2, 0.7, 0.2, 1),
+              box-shadow 220ms ease;
+}
+
+/* Diagonal shine sweep on hover — matches other cards across the site. */
+.tile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 35%,
+    rgba(255, 165, 100, 0.20) 50%,
+    rgba(255, 255, 255, 0) 65%,
+    transparent 100%
+  );
+  transform: skewX(-15deg);
+  transition: left 0.85s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tile > * {
+  position: relative;
+  z-index: 2;
+}
+
+.tile:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-4);
+}
+
+.tile:hover::before { left: 120%; }
+
+/* Icon tile chrome — colored rounded square */
+.iconTile {
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  color: var(--canvas);
+  transition: transform 360ms cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 220ms ease;
+}
+
+.tile:hover .iconTile {
+  transform: rotate(-8deg) scale(1.10);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  display: block;
+}
+
+.label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: var(--ls-h3);
+  color: var(--ink);
+  margin: 0;
+}
+
+.body {
+  font-size: 14px;
+  line-height: var(--lh-base);
+  color: var(--text-2);
+  margin: 0;
+}
+
+/* ============================================================
+   Per-value idle icon animations
+   ============================================================ */
+
+/* Integrity (fingerprint) — gentle scale pulse, like a scan reading */
+.tile[data-value="integrity"] .icon {
+  animation: fingerprintPulse 3s ease-in-out infinite;
+  transform-origin: center;
+}
+@keyframes fingerprintPulse {
+  0%, 100% { transform: scale(1);    opacity: 1;   }
+  50%      { transform: scale(1.08); opacity: 0.85; }
+}
+
+/* Ethics (balance scale) — beam tilts left/right, like weighing */
+.tile[data-value="ethics"] .icon {
+  animation: scaleTilt 4s ease-in-out infinite;
+  transform-origin: 12px 12px;
+}
+@keyframes scaleTilt {
+  0%, 100% { transform: rotate(0); }
+  25%      { transform: rotate(6deg); }
+  50%      { transform: rotate(0); }
+  75%      { transform: rotate(-6deg); }
+}
+
+/* Inclusion (3 circles) — soft brightness pulse */
+.tile[data-value="inclusion"] .icon {
+  animation: inclusionGlow 3.6s ease-in-out infinite;
+  transform-origin: center;
+}
+@keyframes inclusionGlow {
+  0%, 100% { filter: drop-shadow(0 0 0 transparent); transform: scale(1); }
+  50%      { filter: drop-shadow(0 0 4px rgba(255,255,255,0.85)); transform: scale(1.06); }
+}
+
+/* Innovation (lightbulb) — light flicker + brief radiance */
+.tile[data-value="innovation"] .icon {
+  animation: bulbFlicker 4.2s ease-in-out infinite;
+  transform-origin: center;
+}
+@keyframes bulbFlicker {
+  0%, 80%, 100% { filter: drop-shadow(0 0 0 transparent); transform: scale(1); }
+  4%, 12%       { filter: drop-shadow(0 0 6px var(--icon-yellow)); transform: scale(1.05); }
+  6%, 10%       { filter: drop-shadow(0 0 2px transparent); transform: scale(1.02); }
+  20%, 30%      { filter: drop-shadow(0 0 8px rgba(255, 200, 80, 0.9)); transform: scale(1.08); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile,
+  .tile::before,
+  .iconTile,
+  .icon {
+    animation: none;
+    transition: none;
+  }
+  .tile:hover { transform: none; }
+  .tile:hover .iconTile { transform: none; }
+}

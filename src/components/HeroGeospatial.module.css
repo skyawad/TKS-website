@@ -1,0 +1,135 @@
+.scene {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  background: var(--canvas);
+  border: var(--card-edge);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-3);
+  overflow: hidden;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, var(--brand-tint) 1px, transparent 1.5px);
+  background-size: 20px 20px;
+  opacity: 0.7;
+}
+
+.routeSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.route {
+  stroke-dasharray: 6 6;
+  stroke-dashoffset: 0;
+  animation: routeDraw 6s linear infinite;
+}
+
+@keyframes routeDraw {
+  0%   { stroke-dashoffset: 240; }
+  100% { stroke-dashoffset: 0; }
+}
+
+/* Location pins */
+.pin {
+  position: absolute;
+  width: 20px;
+  height: 26px;
+  transform-origin: bottom center;
+}
+
+.pinDrop {
+  animation: pinDrop 6s ease-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes pinDrop {
+  0%       { transform: translateY(-60px) scale(0.4); opacity: 0; }
+  5%, 8%   { transform: translateY(-60px) scale(0.4); opacity: 0; }
+  18%      { transform: translateY(0)     scale(1.15); opacity: 1; }
+  22%      { transform: translateY(0)     scale(1);    opacity: 1; }
+  85%      { transform: translateY(0)     scale(1);    opacity: 1; }
+  100%     { transform: translateY(-60px) scale(0.4); opacity: 0; }
+}
+
+.pinOne   { top: 80px;  left: 70px;  }
+.pinTwo   { top: 130px; left: 210px; }
+.pinTwo .pinDrop   { animation-delay: 0.4s; }
+.pinThree { top: 60px;  right: 50px; }
+.pinThree .pinDrop { animation-delay: 0.8s; }
+.pinFour  { bottom: 60px; right: 50px; }
+.pinFour .pinDrop  { animation-delay: 1.2s; }
+
+/* Coordinate readout */
+.coord {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  border-radius: var(--r-md);
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.coordLine {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+}
+
+.coordLabel {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-top: 2px;
+}
+
+/* Compass */
+.compass {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--canvas);
+  box-shadow: var(--shadow-2);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+}
+
+.compassN {
+  position: absolute;
+  top: 3px;
+  font-size: 9px;
+}
+
+.compassArrow {
+  color: var(--brand);
+  font-size: 16px;
+  line-height: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pinDrop, .route { animation: none; }
+  .pinDrop { transform: translateY(0) scale(1); opacity: 1; }
+}

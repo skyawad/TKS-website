@@ -1,0 +1,117 @@
+.footer {
+  background: var(--ink);
+  color: var(--surface-2);
+  margin-top: var(--space-9);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-5) var(--space-6);
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+  gap: var(--space-7);
+}
+
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .brand {
+    grid-column: 1 / -1;
+  }
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  color: var(--canvas);
+}
+.logoText {
+  transition: color 180ms ease;
+}
+.logo:hover .logoText {
+  color: var(--brand);
+}
+
+.blurb {
+  color: var(--text-2);
+  font-size: 14px;
+  line-height: var(--lh-base);
+  margin: var(--space-3) 0 var(--space-4);
+  max-width: 320px;
+}
+
+.contact {
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #b9b8b6;
+}
+.contact a {
+  color: #d8d6d3;
+}
+.contact a:hover {
+  color: var(--brand);
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-caps);
+  color: var(--canvas);
+  margin: 0 0 var(--space-3);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.list a {
+  font-size: 14px;
+  color: #b9b8b6;
+  transition: color 150ms ease;
+}
+.list a:hover {
+  color: var(--brand);
+}
+
+.legal {
+  border-top: 1px solid #2a2727;
+  padding: var(--space-4) var(--space-5);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  font-size: 12px;
+  color: var(--text-2);
+}
+
+.compliance {
+}
+
+.preview {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  opacity: 0.55;
+  transition: color 150ms ease, opacity 150ms ease;
+}
+.preview:hover {
+  color: var(--brand);
+  opacity: 1;
+}

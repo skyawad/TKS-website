@@ -1,0 +1,83 @@
+.scene {
+  position: relative;
+  width: 100%;
+  height: 360px;
+}
+
+.pipes {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.flowDot {
+  filter: drop-shadow(0 0 4px var(--brand));
+}
+
+/* Stage cards */
+.stage {
+  position: absolute;
+  background: var(--canvas);
+  border: var(--card-edge);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-3);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 170px;
+  animation: bob 4.5s ease-in-out infinite;
+}
+
+.stageIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: var(--canvas);
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.iconSource     { background: var(--brand); }
+.iconTransform  { background: var(--icon-purple); }
+.iconWarehouse  { background: var(--icon-blue); }
+
+.stageBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.stageLabel {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.stageSub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-2);
+  letter-spacing: 0.02em;
+}
+
+.stageOne   { top: 30px;  left: 10px;  animation-delay: 0s; }
+.stageTwo   { top: 145px; right: 0;    animation-delay: -1.5s; }
+.stageThree { bottom: 30px; left: 30px; animation-delay: -3s; }
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage { animation: none; }
+  .flowDot { display: none; }
+}

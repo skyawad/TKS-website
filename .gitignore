@@ -1,0 +1,22 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea
+.vite
+
+# Claude Code machine-local config (permissions, etc.)
+.claude/
+
+# Scratch from Phase 0 PDF/DOCX text + OCR extraction (regeneratable)
+_extracted/
+
+# tsc build cache (in case tsc -b is ever re-introduced)
+*.tsbuildinfo
+
+# Superpowers visual-brainstorm mockups (session-scoped)
+.superpowers/

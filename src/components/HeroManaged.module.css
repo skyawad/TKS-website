@@ -1,0 +1,200 @@
+.scene {
+  position: relative;
+  width: 100%;
+  height: 360px;
+}
+
+/* Server rack card */
+.rack {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 280px;
+  background: var(--canvas);
+  border: var(--card-edge);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-3);
+  padding: 14px 16px;
+  animation: bob 5s ease-in-out infinite;
+}
+
+.rackHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--surface-2);
+  margin-bottom: 10px;
+}
+
+.rackTitle {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+
+.rackPill {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--icon-green);
+  letter-spacing: 0.04em;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.led {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--icon-green);
+  box-shadow: 0 0 6px var(--icon-green);
+  animation: ledBlink 1.4s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.led1 { animation-delay: 0s; }
+.led2 { animation-delay: 0.18s; }
+.led3 { animation-delay: 0.36s; }
+.led4 { animation-delay: 0.54s; }
+.led5 { animation-delay: 0.72s; }
+
+@keyframes ledBlink {
+  0%, 100% { opacity: 0.4; box-shadow: 0 0 2px var(--icon-green); }
+  50%      { opacity: 1;   box-shadow: 0 0 8px var(--icon-green); }
+}
+
+.rowLabel {
+  flex: 1;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.rowVal {
+  font-size: 10px;
+  color: var(--text-2);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Uptime card */
+.uptime {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 130px;
+  background: var(--canvas);
+  border: var(--card-edge);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-3);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  animation: bob 4.5s ease-in-out infinite;
+  animation-delay: -1.5s;
+}
+
+.uptimeLabel {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+
+.uptimeVal {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--ink);
+}
+
+.uptimeBar {
+  height: 5px;
+  background: var(--surface-2);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.uptimeFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--brand) 0%, var(--icon-green) 100%);
+  width: 99.7%;
+  animation: fillSweep 4s ease-in-out infinite;
+  transform-origin: left;
+}
+
+@keyframes fillSweep {
+  0%, 100% { width: 0; }
+  20%, 80% { width: 99.7%; }
+}
+
+/* 24/7 NOC badge */
+.noc {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  width: 110px;
+  height: 100px;
+  background: var(--ink);
+  color: var(--canvas);
+  border-radius: var(--r-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  box-shadow: var(--shadow-3);
+  animation: bob 6s ease-in-out infinite;
+  animation-delay: -3s;
+}
+
+.nocDigit {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.nocSlash {
+  color: var(--brand);
+  margin: 0 1px;
+}
+
+.nocLabel {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--text-2);
+  text-align: center;
+  line-height: 1.3;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rack, .uptime, .noc, .led, .uptimeFill {
+    animation: none;
+  }
+  .uptimeFill { width: 99.7%; }
+}

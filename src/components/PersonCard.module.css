@@ -1,0 +1,315 @@
+/* ============================================================
+   Default (non-flip) variants — used by Contact + UAE leadership
+   ============================================================ */
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  background: var(--canvas);
+  border: var(--card-edge);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-2);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  height: 100%;
+}
+
+.card_compact {
+  padding: var(--space-3);
+  gap: var(--space-3);
+}
+
+.card_large {
+  padding: var(--space-4);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover {
+    transform: none;
+  }
+}
+
+.initial {
+  background: var(--brand);
+  color: var(--canvas);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.card_compact .initial {
+  width: 44px;
+  height: 44px;
+  font-size: 16px;
+  border-radius: 13px;
+}
+
+.card_large .initial {
+  width: 56px;
+  height: 56px;
+  font-size: 20px;
+  border-radius: 16px;
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+}
+
+.region {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--t-label);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: 2px;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--ink);
+  margin: 0 0 2px;
+}
+
+.role {
+  font-size: 13px;
+  color: var(--text-2);
+  margin: 0;
+}
+
+.note {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--text-2);
+  font-style: italic;
+}
+
+.linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--brand);
+}
+.linkedin:hover {
+  color: var(--brand-dark);
+}
+
+/* ============================================================
+   Flippable variant — 3D card flip on hover
+   Front: large colored avatar + name
+   Back: name + role + region + note + LinkedIn
+   ============================================================ */
+.flipCard {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  perspective: 1200px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.flipInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 700ms cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.flipCard:hover .flipInner,
+.flipCard:focus-within .flipInner {
+  transform: rotateY(180deg);
+}
+
+.flipFront,
+.flipBack {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--r-lg);
+  border: var(--card-edge);
+  box-shadow: var(--shadow-2);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+  display: flex;
+}
+
+.flipFront {
+  background: var(--canvas);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+}
+
+/* Big avatar circle on the front */
+.bigAvatar {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  color: var(--canvas);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  display: grid;
+  place-items: center;
+  border: 4px solid var(--canvas);
+  box-shadow: var(--shadow-3);
+}
+
+.frontMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+}
+
+.frontName {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.frontRegion {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+
+.flipHint {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--text-2);
+  opacity: 0.6;
+  transition: opacity 200ms ease;
+}
+
+.flipCard:hover .flipHint {
+  opacity: 0;
+}
+
+/* Back face — colored bg matching avatar tone */
+.flipBack {
+  transform: rotateY(180deg);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+  padding: var(--space-4) var(--space-5);
+  color: var(--canvas);
+}
+
+/* Soft inner overlay on the back to deepen the gradient at the bottom */
+.flipBack::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.15) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.flipBack > * {
+  position: relative;
+  z-index: 1;
+}
+
+.backRegion {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 4px;
+}
+
+.backName {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--canvas);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.backRole {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0;
+  font-weight: 500;
+}
+
+.backNote {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.78);
+  font-style: italic;
+  margin: 6px 0 0;
+  line-height: 1.4;
+}
+
+.backLinkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  border-radius: var(--r-pill);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--canvas);
+  transition: background-color 150ms ease;
+}
+.backLinkedin:hover {
+  background: rgba(255, 255, 255, 0.30);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flipInner {
+    transition: none;
+  }
+  .flipCard:hover .flipInner,
+  .flipCard:focus-within .flipInner {
+    transform: none;
+  }
+  /* Show back content on hover by toggling visibility instead of rotating */
+  .flipCard:hover .flipFront,
+  .flipCard:focus-within .flipFront {
+    visibility: hidden;
+  }
+  .flipBack {
+    transform: none;
+    visibility: hidden;
+  }
+  .flipCard:hover .flipBack,
+  .flipCard:focus-within .flipBack {
+    visibility: visible;
+  }
+}
