@@ -1,3 +1,4 @@
+import { useT } from "../i18n/useT";
 import styles from "./HeroDataEng.module.css";
 
 /**
@@ -6,6 +7,7 @@ import styles from "./HeroDataEng.module.css";
  * flowing through them in sequence.
  */
 export function HeroDataEng() {
+  const t = useT();
   return (
     <div className={styles.scene} aria-hidden="true">
       {/* SVG pipes — drawn behind the stage cards */}
@@ -47,24 +49,24 @@ export function HeroDataEng() {
       <div className={`${styles.stage} ${styles.stageOne}`}>
         <div className={`${styles.stageIcon} ${styles.iconSource}`}>↘</div>
         <div className={styles.stageBody}>
-          <span className={styles.stageLabel}>Source</span>
-          <span className={styles.stageSub}>APIs · DBs · Files</span>
+          <span className={styles.stageLabel}>{t("ha.dataEng.source")}</span>
+          <span className={styles.stageSub}>{t("ha.dataEng.sourceSub")}</span>
         </div>
       </div>
 
       <div className={`${styles.stage} ${styles.stageTwo}`}>
         <div className={`${styles.stageIcon} ${styles.iconTransform}`}>⚙</div>
         <div className={styles.stageBody}>
-          <span className={styles.stageLabel}>Transform</span>
-          <span className={styles.stageSub}>dbt · Spark · Airflow</span>
+          <span className={styles.stageLabel}>{t("ha.dataEng.transform")}</span>
+          <span className={styles.stageSub}>{t("ha.dataEng.transformSub")}</span>
         </div>
       </div>
 
       <div className={`${styles.stage} ${styles.stageThree}`}>
         <div className={`${styles.stageIcon} ${styles.iconWarehouse}`}>▤</div>
         <div className={styles.stageBody}>
-          <span className={styles.stageLabel}>Warehouse</span>
-          <span className={styles.stageSub}>Snowflake · BigQuery</span>
+          <span className={styles.stageLabel}>{t("ha.dataEng.warehouse")}</span>
+          <span className={styles.stageSub}>{t("ha.dataEng.warehouseSub")}</span>
         </div>
       </div>
     </div>

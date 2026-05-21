@@ -45,15 +45,15 @@ export function HeroAiStrategy() {
 
       <div className={`${styles.tag} ${styles.tagAgent}`}>
         <span className={styles.tagDot} />
-        Agent
+        {t("ha.ai.agent")}
       </div>
       <div className={`${styles.tag} ${styles.tagLlm}`}>
         <span className={styles.tagDot} />
-        LLM
+        {t("ha.ai.llm")}
       </div>
       <div className={`${styles.tag} ${styles.tagRag}`}>
         <span className={styles.tagDot} />
-        RAG
+        {t("ha.ai.rag")}
       </div>
     </div>
   );

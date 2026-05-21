@@ -1,3 +1,4 @@
+import { useT } from "../i18n/useT";
 import styles from "./HeroAnalytics.module.css";
 
 /**
@@ -6,11 +7,12 @@ import styles from "./HeroAnalytics.module.css";
  * plus two floating KPI tiles that bob.
  */
 export function HeroAnalytics() {
+  const t = useT();
   return (
     <div className={styles.scene} aria-hidden="true">
       <div className={styles.dashboard}>
         <div className={styles.dashHead}>
-          <span className={styles.dashTitle}>Revenue · Q4</span>
+          <span className={styles.dashTitle}>{t("ha.analytics.revenueQ4")}</span>
           <span className={styles.dashTrend}>+24.6%</span>
         </div>
         <div className={styles.chart}>
@@ -35,12 +37,12 @@ export function HeroAnalytics() {
       </div>
 
       <div className={`${styles.kpi} ${styles.kpiOne}`}>
-        <span className={styles.kpiLabel}>MRR</span>
+        <span className={styles.kpiLabel}>{t("ha.analytics.mrr")}</span>
         <span className={styles.kpiValue}>$2.4M</span>
         <span className={styles.kpiDelta}>▲ 12%</span>
       </div>
       <div className={`${styles.kpi} ${styles.kpiTwo}`}>
-        <span className={styles.kpiLabel}>NPS</span>
+        <span className={styles.kpiLabel}>{t("ha.analytics.nps")}</span>
         <span className={styles.kpiValue}>72</span>
         <span className={styles.kpiDelta}>▲ 4</span>
       </div>
